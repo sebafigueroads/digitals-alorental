@@ -6914,27 +6914,19 @@ function Sidebar({ section, setSection, onClickItem }) {
     { name: 'F · Web madre · arquitectura', items: [
       { id: 'webmother',   num: 'W.0',  label: '🏗 Web madre · preview' }
     ] },
-    { name: 'G · 3 propuestas de web (full)', featured: true, badge: 'W.3 RECOMENDADA ★', items: [
-      { id: 'styles-ovr',      num: 'W.X', label: '🎨 Overview · 4 direcciones' },
-      { id: 'web-taller',      num: 'W.1', label: '🏭 Industrial Editorial',           accent: '#FF6B00' },
-      { id: 'web-pop',         num: 'W.2', label: '📋 Catálogo Pro Rental',            accent: '#FFCE00' },
-      { id: 'web-verde',       num: 'W.3', label: '📡 Fleet OS · Datos en Vivo',       accent: '#3EC3F2' },
-      { id: 'web-digitalscut', num: 'W.4', label: '★ Digitals Cut · recomendada',     accent: '#FF6B00' }
+    { name: 'G · 5 propuestas de web (full)', featured: true, badge: 'W.5 RECOMENDADA ★', items: [
+      { id: 'styles-ovr',      num: 'W.X', label: '🎨 Overview · 5 direcciones' },
+      { id: 'web-taller',      num: 'W.1', label: '🏭 W.1 · Industrial Editorial',           accent: '#FF6B00' },
+      { id: 'web-pop',         num: 'W.2', label: '📋 W.2 · Catálogo Pro Rental',            accent: '#FFCE00' },
+      { id: 'web-verde',       num: 'W.3', label: '📡 W.3 · Fleet OS · Datos en Vivo',       accent: '#3EC3F2' },
+      { id: 'web-digitalscut', num: 'W.4', label: '✨ W.4 · Digitals Cut',                    accent: '#FF6B00' },
+      { id: 'web-tailored-v2', num: 'W.5', label: '★ W.5 · Tailored V2 · amarillo + negro ALO',  accent: '#FFCE00' }
     ] },
     { name: 'H · Sistemas gráficos RRSS', featured: true, items: [
       { id: 'rrss-taller', num: 'R.1',  label: '📷 RRSS · Faena Real',                accent: '#FF6B00' },
       { id: 'rrss-pop',    num: 'R.2',  label: '📋 RRSS · Catálogo Rotación',         accent: '#FFCE00' },
       { id: 'rrss-verde',  num: 'R.3',  label: '📡 RRSS · Fleet OS Datos',            accent: '#3EC3F2' },
       { id: 'rrss-tryon',  num: 'R.4',  label: '🎯 RRSS · Ready-to-post con texto ★', accent: '#FF6B00' }
-    ] },
-    { name: 'I · 4 landings dedicadas', items: [
-      { id: 'land-tijeras', num: 'L.1', label: '🪜 L.1 · Tijeras + personales',       accent: '#FF6B00' },
-      { id: 'land-flota',         num: 'L.2', label: '🏗 L.2 · Brazos + manipuladores',     accent: '#FFCE00' },
-      { id: 'land-widget',        num: 'L.3', label: '⛏ L.3 · Minería + energía',          accent: '#3EC3F2' },
-      { id: 'land-recomendador',  num: 'L.4', label: '🤖 L.4 · IA Recomendador ★',          accent: '#FF6B00' }
-    ] },
-    { name: 'M · W.5 Tailored V2 · paleta REAL alorental.cl', featured: true, badge: 'NUEVA ★', items: [
-      { id: 'web-tailored-v2', num: 'W.5', label: '🎨 W.5 · Tailored V2 · amarillo + negro ALO ★', accent: '#FFCE00' }
     ] },
     { name: 'J · 9 sucursales + LATAM', items: [
       { id: 'alo-sucursales', num: '06.0', label: '📍 9 sucursales · norte a sur' },
@@ -11442,8 +11434,17 @@ function WebTailoredV2Section() {
 }
 
 function App() {
-  const [section, setSection] = useState('summary');
+  const initial = (window.location.hash || '#summary').replace('#', '');
+  const [section, setSection] = useState(initial);
   const [mobileNav, setMobileNav] = useState(false);
+
+  // Hash sync · resolve broken links
+  useEffect(() => {
+    const onHash = () => setSection((window.location.hash || '#summary').replace('#', ''));
+    window.addEventListener('hashchange', onHash);
+    return () => window.removeEventListener('hashchange', onHash);
+  }, []);
+  useEffect(() => { if (window.location.hash !== '#' + section) window.location.hash = '#' + section; window.scrollTo({ top: 0, behavior: 'auto' }); }, [section]);
 
   // Cursor trail
   useEffect(() => {
@@ -11531,10 +11532,6 @@ function App() {
       case 'rrss-pop':   return <RrssSection propId="rrss-pop"/>;
       case 'rrss-verde': return <RrssSection propId="rrss-verde"/>;
       case 'rrss-tryon': return <RrssTryOnSection/>;
-      case 'land-tijeras':return <LandTijerasSection/>;
-      case 'land-flota': return <LandFlotaSection/>;
-      case 'land-widget':return <LandFlotaWidgetSection/>;
-      case 'land-recomendador': return <LandRecomendadorIASection/>;
       case 'web-tailored-v2': return <WebTailoredV2Section/>;
       case 'showcase':       return <ShowcaseSection/>;
       case 'digitals-about': return <DigitalsAboutSection/>;
