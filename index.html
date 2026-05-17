@@ -8895,7 +8895,7 @@ function WebStyleSection({ styleId }) {
           </video>
           <div className="sh-nav">
             <div className="sh-logo-mark" style={{ display: 'flex', alignItems: 'center', gap: '.6rem' }}>
-              <img src="assets/logo/alo-rental-logo-real.webp" alt="ALO Rental" style={{ height: 36, width: 'auto', objectFit: 'contain', filter: 'brightness(1.1)' }}/>
+              <img src="assets/logo/alo-rental-logo-amarillo.webp" alt="ALO Rental" style={{ height: 36, width: 'auto', objectFit: 'contain', filter: 'brightness(1.1)' }}/>
               <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.55rem', letterSpacing: '.22em', color: '#FF6B00', fontWeight: 700 }}>· {s.id === 'verde' ? 'FLEET OS' : s.id === 'pop' ? 'CATÁLOGO PRO' : 'INDUSTRIAL'}</span>
             </div>
             <div className="sh-menu"><span>FLOTA</span><span>CASOS</span><span>SUCURSALES</span><span>RESERVAR</span></div>
@@ -8972,7 +8972,7 @@ function WebStyleSection({ styleId }) {
               {/* 4-column nav · brand + servicios + recursos + legal */}
               <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr 1fr 1fr', gap: '2rem', marginBottom: '2rem', position: 'relative', zIndex: 2 }}>
                 <div>
-                  <img src="assets/logo/alo-rental-logo-real.webp" alt="alo rental" style={{ height: 52, width: 'auto', objectFit: 'contain', borderRadius: 10, background: 'rgba(255,255,255,0.95)', padding: 6, marginBottom: '.9rem' }}/>
+                  <img src="assets/logo/alo-rental-logo-amarillo.webp" alt="alo rental" style={{ height: 52, width: 'auto', objectFit: 'contain', borderRadius: 10, background: 'rgba(255,255,255,0.95)', padding: 6, marginBottom: '.9rem' }}/>
                   <p style={{ fontSize: '.82rem', color: fmute, lineHeight: 1.6, marginBottom: '1rem' }}>4 años imprimiendo equipos que se ven en cámara. equipos JLG certificados. Vestimos Codelco para División Andina. Confección + arriendo + flota B2B.</p>
                   <div style={{ display: 'flex', gap: '.55rem', flexWrap: 'wrap' }}>
                     {['IG', 'FB', 'IN', 'YT', 'PIN'].map(net => (
@@ -9371,7 +9371,7 @@ function DigitalsCutSection() {
           </video>
           <div className="dc-nav">
             <div style={{ display: 'flex', alignItems: 'center', gap: '.7rem' }}>
-              <img src="assets/logo/alo-rental-logo-real.webp" alt="alo rental" style={{ height: 52, width: 'auto', objectFit: 'contain', borderRadius: 10, background: 'rgba(255,255,255,0.94)', padding: 5 }}/>
+              <img src="assets/logo/alo-rental-logo-amarillo.webp" alt="alo rental" style={{ height: 52, width: 'auto', objectFit: 'contain', borderRadius: 10, background: 'rgba(255,255,255,0.94)', padding: 5 }}/>
               <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.55rem', letterSpacing: '.22em', color: '#3EC3F2' }}>· DIGITALS CUT</span>
             </div>
             <div className="dc-menu">
@@ -9601,7 +9601,7 @@ function DigitalsCutSection() {
           {/* 4-col nav rich */}
           <div style={{ display: 'grid', gridTemplateColumns: '1.6fr 1fr 1fr 1fr 1fr', gap: '1.8rem', marginBottom: '2.2rem', position: 'relative', zIndex: 2 }}>
             <div>
-              <img src="assets/logo/alo-rental-logo-real.webp" alt="ALO Rental" style={{ height: 60, width: 'auto', objectFit: 'contain', borderRadius: 10, background: 'rgba(255,255,255,0.95)', padding: 6, marginBottom: '1rem' }}/>
+              <img src="assets/logo/alo-rental-logo-amarillo.webp" alt="ALO Rental" style={{ height: 60, width: 'auto', objectFit: 'contain', borderRadius: 10, background: 'rgba(255,255,255,0.95)', padding: 6, marginBottom: '1rem' }}/>
               <p style={{ fontSize: '.82rem', color: 'rgba(244,236,220,0.62)', lineHeight: 1.65, marginBottom: '1rem' }}>20 años de oficio industrial. Representantes oficiales JLG y ALO Lift. 2.050+ equipos en flota · 9 sucursales en Chile · cobertura nacional completa. <b style={{ color: '#FF6B00' }}>Equipamos faenas que no pueden detenerse.</b></p>
               <div style={{ display: 'flex', gap: '.5rem', flexWrap: 'wrap' }}>
                 {['IG', 'FB', 'IN', 'YT', 'PIN'].map(net => (
@@ -9907,7 +9907,7 @@ function FlotaStudioCompact() {
     reader.onload = (e) => { setLogo(e.target.result); setGenerated(false); };
     reader.readAsDataURL(file);
   };
-  const loadDemoLogo = () => { setLogo('assets/logo/alo-rental-logo-real.webp'); setGenerated(false); };
+  const loadDemoLogo = () => { setLogo('assets/logo/alo-rental-logo-amarillo.webp'); setGenerated(false); };
   const selected = MERCH_PRODUCTS.find(p => p.id === productId) || MERCH_PRODUCTS[0];
   const variants = [1, 2, 3, 4].map(v => `assets/flota/${productId}-${v}.jpg`);
   return (
@@ -9923,7 +9923,7 @@ function FlotaStudioCompact() {
           <input ref={fileRef} type="file" accept="image/*" style={{ display: 'none' }}
                  onChange={(e) => handleFile(e.target.files[0])}/>
         </div>
-        <button type="button" onClick={loadDemoLogo} className={'flota-demo-btn ' + (logo === 'assets/logo/alo-rental-logo-real.webp' ? 'active' : '')}>
+        <button type="button" onClick={loadDemoLogo} className={'flota-demo-btn ' + (logo === 'assets/logo/alo-rental-logo-amarillo.webp' ? 'active' : '')}>
           <span className="sparkle">✦</span>
           <span style={{ flex: 1 }}>Probar con logo demo</span>
         </button>
@@ -9998,7 +9998,7 @@ function LandFlotaWidgetSection() {
     if (e.dataTransfer.files[0]) handleFile(e.dataTransfer.files[0]);
   };
   const loadDemoLogo = () => {
-    setLogo('assets/logo/alo-rental-logo-real.webp');
+    setLogo('assets/logo/alo-rental-logo-amarillo.webp');
     setGenerated(false);
   };
   const generate = () => {
@@ -10108,7 +10108,7 @@ function LandFlotaWidgetSection() {
               </div>
 
               <button type="button" onClick={loadDemoLogo}
-                className={'flota-demo-btn ' + (logo === 'assets/logo/alo-rental-logo-real.webp' ? 'active' : '')}>
+                className={'flota-demo-btn ' + (logo === 'assets/logo/alo-rental-logo-amarillo.webp' ? 'active' : '')}>
                 <span className="sparkle">✦</span>
                 <span style={{ flex: 1 }}>¿Sin logo a mano? Prueba con el logo demo de ALO Rental</span>
               </button>
@@ -11288,7 +11288,7 @@ function WebTailoredV2Section() {
           </div>
           {/* main bar con logo */}
           <div style={{ padding: '.9rem 2rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-            <img src="assets/logo/alo-rental-logo-real.webp" alt="ALO Rental" style={{ height: 44, width: 'auto' }}/>
+            <img src="assets/logo/alo-rental-logo-amarillo.webp" alt="ALO Rental" style={{ height: 44, width: 'auto' }}/>
             <div style={{ display: 'flex', gap: '1.4rem', fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: '.82rem', color: '#0E1117', textTransform: 'uppercase', letterSpacing: '.04em' }}>
               <span>Empresa</span>
               <span>Arriendo Alzahombres</span>
@@ -11346,6 +11346,34 @@ function WebTailoredV2Section() {
                 <h4 style={{ position: 'relative', zIndex: 2, fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '1.4rem', color: '#FFFFFF', letterSpacing: '-0.01em' }}>{ind}</h4>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* SUCURSALES · 3 FOTOS REALES */}
+        <div style={{ background: '#0E1117', padding: '3.5rem 2.5rem' }}>
+          <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+            <span style={{ fontFamily: 'Inter, sans-serif', fontWeight: 800, fontSize: '.72rem', letterSpacing: '.18em', color: '#FFCE00', textTransform: 'uppercase' }}>SUCURSALES · 9 PUNTOS NORTE A SUR</span>
+            <h2 style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '2.4rem', color: '#FFFFFF', lineHeight: 1.1, letterSpacing: '-0.02em', marginTop: '.4rem' }}>De Iquique a Punta Arenas · <em style={{ fontStyle: 'normal', color: '#FFCE00' }}>cobertura nacional real</em></h2>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' }}>
+            {[
+              { name: 'Iquique', region: 'I Región · Norte Grande', img: 'assets/sucursales/iquique.webp', industrias: 'Minería · Zona franca · Puertos' },
+              { name: 'Coquimbo', region: 'IV Región · Centro Norte', img: 'assets/sucursales/coquimbo.webp', industrias: 'Construcción · Vitivinícola' },
+              { name: 'Puerto Montt', region: 'X Región · Zona Sur', img: 'assets/sucursales/puerto-montt.webp', industrias: 'Salmonicultura · Forestal · Puertos' }
+            ].map((s, i) => (
+              <div key={i} style={{ borderRadius: '14px', overflow: 'hidden', border: '1px solid rgba(255,206,0,0.30)', position: 'relative', aspectRatio: '4/3' }}>
+                <img src={s.img} alt={s.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}/>
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 30%, rgba(14,17,23,0.92) 100%)' }}/>
+                <div style={{ position: 'absolute', bottom: '1rem', left: '1.1rem', right: '1.1rem' }}>
+                  <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '.6rem', letterSpacing: '.18em', color: '#FFCE00', textTransform: 'uppercase', fontWeight: 800, marginBottom: '.2rem' }}>📍 {s.region}</div>
+                  <h4 style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '1.6rem', color: '#FFFFFF', letterSpacing: '-0.01em', marginBottom: '.3rem' }}>{s.name}</h4>
+                  <div style={{ fontSize: '.72rem', color: 'rgba(255,255,255,0.75)', lineHeight: 1.4 }}>{s.industrias}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div style={{ textAlign: 'center', marginTop: '1.4rem' }}>
+            <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '.78rem', color: 'rgba(255,255,255,0.55)', letterSpacing: '.04em' }}>+ Antofagasta · Copiapó · Valparaíso · Santiago · Rancagua · Concepción · Temuco</span>
           </div>
         </div>
 
