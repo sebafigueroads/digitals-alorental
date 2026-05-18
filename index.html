@@ -6928,11 +6928,10 @@ function Sidebar({ section, setSection, onClickItem }) {
     { name: 'C · Diagnóstico ALO Rental', items: [
       { id: 'brief',          num: '02.0', label: '🎯 Brief + capacidades flota' },
       { id: 'audit',          num: '02.1', label: '🔍 alorental.cl · audit actual' },
-      { id: 'logo',           num: '02.2', label: '🏷 Análisis de logo' },
-      { id: 'market',         num: '02.3', label: '📊 Benchmark + competidores' },
-      { id: 'insights',       num: '02.4', label: '💡 5 insights B2B industrial' },
-      { id: 'alo-sucursales', num: '02.5', label: '📍 9 sucursales · norte a sur' },
-      { id: 'alo-latam',      num: '02.6', label: '🌎 ALO Group · 5 países LATAM' }
+      { id: 'market',         num: '02.2', label: '📊 Benchmark + competidores' },
+      { id: 'insights',       num: '02.3', label: '💡 5 insights B2B industrial' },
+      { id: 'alo-sucursales', num: '02.4', label: '📍 9 sucursales · norte a sur' },
+      { id: 'alo-latam',      num: '02.5', label: '🌎 ALO Group · 5 países LATAM' }
     ] },
     { name: 'D · Estrategia comunicacional', items: [
       { id: 'comm',       num: '03.0', label: '🗣 Voz + tono industrial' },
@@ -6948,9 +6947,9 @@ function Sidebar({ section, setSection, onClickItem }) {
     { name: 'F · Web madre · arquitectura', items: [
       { id: 'webmother',   num: 'W.0',  label: '🏗 Web madre · preview' }
     ] },
-    { name: 'G · 2 propuestas de web (full)', featured: true, badge: 'W.5 RECOMENDADA ★', items: [
-      { id: 'web-digitalscut', num: 'W.4', label: '✨ W.4 · Digitals Cut',                    accent: '#FFCE00' },
-      { id: 'web-tailored-v2', num: 'W.5', label: '★ W.5 · Tailored V2 · amarillo + negro ALO',  accent: '#FFCE00' }
+    { name: 'G · 2 propuestas de web (full)', featured: true, badge: '2 DIRECCIONES', items: [
+      { id: 'web-digitalscut', num: 'W.4', label: '✨ W.4 · Digitals Cut · dark editorial', accent: '#FFCE00' },
+      { id: 'web-tailored-v2', num: 'W.5', label: '★ W.5 · Tailored V2 · amarillo signature', accent: '#FFCE00' }
     ] },
     { name: 'H · Showcase + Cierre', items: [
       { id: 'showcase', num: 'S.0', label: '🎬 Showcase · gráficas + videos' }
@@ -9358,12 +9357,12 @@ function DigitalsCutSection() {
   return (
     <section>
       <SectionHead num="W.4"
-        title="Digitals Cut · <em>recomendada</em> ★"
-        desc="La 4ta versión es la que recomendamos al cierre. Toma la dirección Taller Editorial (W.1) como base + integra el widget Flota B2B en vivo + suma un bloque interactivo de casos editoriales (Codelco · sostenibilidad ESG · prensa) optimizado para SEO clásico + AEO (citas en LLMs) + GEO (Generative Engine Optimization). Es ALO Rental preparada para 2027 sin abandonar lo que hizo bien estos 4 años."/>
+        title="W.4 · Digitals Cut · <em>dirección editorial dark</em>"
+        desc="Versión web dark con foco editorial: hero video + manifiesto + bloque interactivo de casos (Codelco · sostenibilidad ESG · prensa) optimizado para SEO clásico + AEO (citas en LLMs) + GEO. Una de las dos direcciones que ponemos sobre la mesa · 100% lista para producción."/>
 
       <div className="preview-note" style={{ borderColor: '#FFCE00', background: 'rgba(242,193,43,0.06)', color: '#FFCE00' }}>
-        <b>— RECOMENDADA. </b>
-        Esta versión combina los mejores activos de las propuestas anteriores: oficio editorial (W.1) + widget interactivo (L.3) + sostenibilidad ESG (W.3) + caso Codelco Â· DivisiÃ³n Andina como prensa pop. <span className="arrow" style={{ color: '#FFCE00' }}>→</span> Optimizada para que aparezca en búsquedas Google + sea citada por LLMs (ChatGPT, Claude, Gemini) + capture lead B2B premium.
+        <b>— DIRECCIÓN A · DARK EDITORIAL. </b>
+        Combina hero video + manifiesto editorial + casos interactivos + cotizador IA + recomendador IA. <span className="arrow" style={{ color: '#FFCE00' }}>→</span> Optimizada para aparecer en búsquedas Google + ser citada por LLMs (ChatGPT, Claude, Gemini) + capturar lead B2B premium. Hermana visual de W.5 — ambas pesan igual y la decisión final es de tu equipo.
       </div>
 
       <div className="dc-shell">
@@ -9371,7 +9370,7 @@ function DigitalsCutSection() {
           <div className="dot" style={{ background: '#FF5A3C' }}/>
           <div className="dot" style={{ background: '#FFCE00' }}/>
           <div className="dot" style={{ background: '#A3E635' }}/>
-          <div className="url">— alorental.cl · digitals cut · recomendada</div>
+          <div className="url">— alorental.cl · digitals cut · dirección A</div>
         </div>
 
         {/* HERO con video real */}
@@ -9393,7 +9392,7 @@ function DigitalsCutSection() {
             </div>
           </div>
           <div className="dc-content">
-            <span className="dc-badge"><span className="star">★</span> RECOMENDADA · COTIZADOR + RECOMENDADOR + CASOS</span>
+            <span className="dc-badge"><span className="star">★</span> DIRECCIÓN A · COTIZADOR + RECOMENDADOR + CASOS</span>
             <h1>Tu proyecto <em>no puede detenerse</em>.</h1>
             <p className="dc-sub">20 años representando oficialmente a JLG en Chile. 2.050+ equipos en flota. 9 sucursales activas de Iquique a Puerto Montt. Cotiza por día o recibe la recomendación de equipo según tu faena · antes de comprometer presupuesto.</p>
             <div className="dc-cta-row">
@@ -11272,8 +11271,8 @@ function WebTailoredV2Section() {
         .v2-3d-card h4 { transition: transform .45s cubic-bezier(.2,.7,.2,1); }
       `}</style>
       <SectionHead num="W.5"
-        title="W.5 · Tailored Digitals V2 · <em>actualización paleta REAL alorental.cl</em> ★"
-        desc="Misma idea que W.4 Digitals Cut pero ahora 100% alineada a la paleta y tono visual del sitio actual de alorental.cl: amarillo signature como background principal · negro corporate · acentos ALO orange · rojo equipos. Modernización, no rebrand. Mantenemos lo que el mercado ya reconoce."/>
+        title="W.5 · Tailored Digitals V2 · <em>amarillo signature</em>"
+        desc="Dirección visual 100% alineada a la paleta del sitio actual de alorental.cl: amarillo signature como background principal · negro corporate · acentos ALO orange · rojo equipos. Modernización, no rebrand. Hermana de W.4 — ambas pesan igual y la decisión final es de tu equipo."/>
 
       <div className="info-card" style={{ marginBottom: '1.4rem', borderColor: '#FFCE00', background: 'rgba(255,206,0,0.10)' }}>
         <div className="d-kicker">★ POSICIÓN DIGITALS</div>
@@ -11600,7 +11599,6 @@ function App() {
       case 'summary':    return <SummarySection/>;
       case 'brief':      return <BriefSection/>;
       case 'audit':      return <AuditSection/>;
-      case 'logo':       return <LogoSection/>;
       case 'market':     return <MarketSection/>;
       case 'insights':   return <InsightsSection/>;
       case 'comm':       return <CommSection/>;
