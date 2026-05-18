@@ -213,6 +213,7 @@ window.LET_TOKENS = {
   market: [
     { name: 'ALO Rental',           type: 'cliente',   bucket: 'PTA CL',      focus: 'Líder · 9 sucursales · ALO Group LATAM · JLG oficial',                  web: 7, gap: 'Cero calculadora · stock no transparente online · casos sin métricas.' },
     { name: 'Aerocon',              type: 'directo',   bucket: 'PTA CL',      focus: 'Foco brazos articulados · norte y centro · sin gran flota minera',       web: 6, gap: 'Sin landing por industria · paid muy básico · marca poco diferenciada.' },
+    { name: 'HELI Chile',           type: 'directo',   bucket: 'Maquinaria CL', focus: 'Forklift chino · escala nacional · arriendo + venta · fuerte en logística + retail',  web: 6, gap: 'No tiene PTA (solo forklift) · oportunidad de partnership cross-sell · mismo mandante.' },
     { name: 'Sociedad Maquinaria',  type: 'directo',   bucket: 'PTA CL',      focus: 'Multi-categoría · arriendo + venta · cobertura limitada al centro',       web: 5, gap: 'Sin coordinación LATAM · sin certificación operador acreditada.' },
     { name: 'Solem',                type: 'directo',   bucket: 'PTA CL',      focus: 'Foco scissor + spider · construcción liviana · Santiago RM',              web: 6, gap: 'No tiene cobertura nacional · sin contratos largos visibles.' },
     { name: 'Andes Cargo',          type: 'directo',   bucket: 'PTA CL',      focus: 'Manipuladores telescópicos + forklift · forestal',                        web: 5, gap: 'Marca confusa · catálogo desactualizado · sin partnerships visibles.' },

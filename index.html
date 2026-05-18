@@ -21,7 +21,7 @@
   --accent: #FF6B00;          /* JLG orange */
   --accent-deep: #C24E00;
   --accent2: #FFCE00;         /* eco lime */
-  --accent3: #3EC3F2;         /* cable dorado */
+  --accent3: #FFCE00;         /* cable dorado */
   --accent-current: #FF6B00;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -5888,10 +5888,10 @@ html { scroll-behavior: smooth; }
   font-weight: 800; font-size: 1rem;
   letter-spacing: 0.02em;
 }
-.dc-hero .dc-logo em { color: #3EC3F2; font-style: normal; }
+.dc-hero .dc-logo em { color: #FFCE00; font-style: normal; }
 .dc-hero .dc-menu { display: flex; gap: 1.4rem; opacity: .9; }
 .dc-hero .dc-menu .pill {
-  background: #3EC3F2;
+  background: #FFCE00;
   color: #0E1117;
   padding: .3rem .7rem;
   border-radius: 100px;
@@ -5907,7 +5907,7 @@ html { scroll-behavior: smooth; }
   display: inline-flex; align-items: center; gap: .55rem;
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.66rem; letter-spacing: 0.22em;
-  color: #3EC3F2;
+  color: #FFCE00;
   background: rgba(11,10,8,0.55);
   border: 1px solid rgba(242,193,43,0.40);
   padding: .5rem 1rem;
@@ -5916,7 +5916,7 @@ html { scroll-behavior: smooth; }
   text-transform: uppercase;
   backdrop-filter: blur(8px);
 }
-.dc-hero .dc-badge .star { color: #3EC3F2; font-size: 1rem; line-height: 1; }
+.dc-hero .dc-badge .star { color: #FFCE00; font-size: 1rem; line-height: 1; }
 .dc-hero h1 {
   font-family: 'Inter Tight', sans-serif;
   font-weight: 800;
@@ -5932,7 +5932,7 @@ html { scroll-behavior: smooth; }
   font-family: 'Instrument Serif', serif;
   font-style: italic;
   font-weight: 500;
-  color: #3EC3F2;
+  color: #FFCE00;
   text-transform: none;
 }
 .dc-hero .dc-sub {
@@ -5944,7 +5944,7 @@ html { scroll-behavior: smooth; }
 }
 .dc-hero .dc-cta-row { display: flex; gap: .7rem; flex-wrap: wrap; }
 .dc-hero .dc-cta-primary {
-  background: linear-gradient(135deg, #FF6B00, #3EC3F2);
+  background: linear-gradient(135deg, #FF6B00, #FFCE00);
   color: #0E1117;
   font-family: 'Inter Tight', sans-serif;
   font-weight: 700;
@@ -5981,7 +5981,7 @@ html { scroll-behavior: smooth; }
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
-.dc-section.bg-dark .dc-kicker { color: #3EC3F2; }
+.dc-section.bg-dark .dc-kicker { color: #FFCE00; }
 .dc-section h2 {
   font-family: 'Inter Tight', sans-serif;
   font-weight: 700;
@@ -5999,7 +5999,7 @@ html { scroll-behavior: smooth; }
   font-weight: 500;
   text-transform: none;
 }
-.dc-section.bg-dark h2 em { color: #3EC3F2; }
+.dc-section.bg-dark h2 em { color: #FFCE00; }
 .dc-section .dc-sub {
   font-size: 1.02rem; line-height: 1.65;
   color: #6A6357;
@@ -6059,6 +6059,7 @@ html { scroll-behavior: smooth; }
   display: grid; grid-template-columns: 1.6fr 1fr 1fr;
   grid-template-rows: 280px 280px;
   gap: 1rem;
+  perspective: 1400px;
 }
 @media (max-width: 1000px) { .dc-casos-grid { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, 280px); } }
 @media (max-width: 600px) { .dc-casos-grid { grid-template-columns: 1fr; grid-template-rows: repeat(5, 240px); } }
@@ -6068,10 +6069,19 @@ html { scroll-behavior: smooth; }
   position: relative;
   background-size: cover; background-position: center;
   cursor: pointer;
-  transition: transform .35s, box-shadow .35s;
+  transition: transform .45s cubic-bezier(.2,.7,.2,1), box-shadow .45s, filter .45s;
   border: 1px solid rgba(26,24,20,0.10);
+  transform-style: preserve-3d;
+  will-change: transform;
 }
-.dc-caso:hover { transform: translateY(-5px); box-shadow: 0 30px 60px -16px rgba(255,90,31,0.30); }
+.dc-caso:hover {
+  transform: translateY(-8px) rotateX(4deg) rotateY(-3deg) scale(1.02);
+  box-shadow: 0 40px 80px -16px rgba(255,107,0,0.45), 0 0 0 2px rgba(255,206,0,0.40);
+  filter: saturate(1.1);
+  z-index: 2;
+}
+.dc-caso:hover .caso-meta { transform: translateZ(40px); }
+.dc-caso .caso-meta { transition: transform .45s cubic-bezier(.2,.7,.2,1); }
 .dc-caso.big { grid-row: span 2; }
 .dc-caso::after {
   content: ''; position: absolute; inset: 0;
@@ -6087,7 +6097,7 @@ html { scroll-behavior: smooth; }
   display: inline-block;
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.55rem; letter-spacing: 0.2em;
-  color: #3EC3F2;
+  color: #FFCE00;
   background: rgba(11,10,8,0.55);
   padding: .3rem .6rem;
   border-radius: 100px;
@@ -6116,7 +6126,7 @@ html { scroll-behavior: smooth; }
   margin-top: .7rem;
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.62rem; letter-spacing: 0.18em;
-  color: #3EC3F2;
+  color: #FFCE00;
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -6176,14 +6186,14 @@ html { scroll-behavior: smooth; }
   color: #F2EFE6;
   border-radius: 12px;
   margin-bottom: 1.2rem;
-  border-left: 4px solid #3EC3F2;
+  border-left: 4px solid #FFCE00;
   flex-wrap: wrap;
 }
 .dc-seo-ribbon .seo-badge {
   display: inline-flex; align-items: center; gap: .35rem;
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.62rem; letter-spacing: 0.18em;
-  color: #3EC3F2;
+  color: #FFCE00;
   background: rgba(242,193,43,0.12);
   padding: .35rem .65rem;
   border-radius: 100px;
@@ -6199,7 +6209,7 @@ html { scroll-behavior: smooth; }
   margin: 0;
   min-width: 280px;
 }
-.dc-seo-ribbon p b { color: #3EC3F2; font-weight: 600; }
+.dc-seo-ribbon p b { color: #FFCE00; font-weight: 600; }
 
 /* CTA Final block */
 .dc-cta-final {
@@ -6231,7 +6241,7 @@ html { scroll-behavior: smooth; }
 .dc-cta-final h2 em {
   font-family: 'Instrument Serif', serif;
   font-style: italic;
-  color: #3EC3F2;
+  color: #FFCE00;
   font-weight: 500;
   text-transform: none;
 }
@@ -6352,7 +6362,7 @@ html { scroll-behavior: smooth; }
   display: inline-block;
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.7rem; letter-spacing: 0.24em;
-  color: #3EC3F2;
+  color: #FFCE00;
   background: rgba(242,193,43,0.10);
   border: 1px solid rgba(242,193,43,0.30);
   padding: .5rem 1rem;
@@ -6374,7 +6384,7 @@ html { scroll-behavior: smooth; }
   font-family: 'Instrument Serif', serif;
   font-style: italic;
   font-weight: 500;
-  color: #3EC3F2;
+  color: #FFCE00;
   text-transform: none;
   letter-spacing: 0;
 }
@@ -6389,7 +6399,7 @@ html { scroll-behavior: smooth; }
   margin-bottom: 2.5rem;
 }
 .lw-hero .lw-cta-primary {
-  background: linear-gradient(135deg, #3EC3F2, #FF6B00);
+  background: linear-gradient(135deg, #FFCE00, #FF6B00);
   color: #0E1117;
   font-family: 'Inter Tight', sans-serif;
   font-weight: 700;
@@ -6429,7 +6439,7 @@ html { scroll-behavior: smooth; }
   font-family: 'Inter Tight', sans-serif;
   font-weight: 800;
   font-size: 1.8rem;
-  color: #3EC3F2;
+  color: #FFCE00;
   letter-spacing: -0.015em;
   line-height: 1;
 }
@@ -6568,12 +6578,12 @@ html { scroll-behavior: smooth; }
   display: flex; align-items: center; gap: .6rem;
   transition: all .25s;
 }
-.flota-demo-btn:hover { border-color: #3EC3F2; background: rgba(242,193,43,0.12); color: #1A1814; }
-.flota-demo-btn.active { border: 1px solid #3EC3F2; background: rgba(242,193,43,0.16); color: #1A1814; font-weight: 600; }
+.flota-demo-btn:hover { border-color: #FFCE00; background: rgba(242,193,43,0.12); color: #1A1814; }
+.flota-demo-btn.active { border: 1px solid #FFCE00; background: rgba(242,193,43,0.16); color: #1A1814; font-weight: 600; }
 .flota-demo-btn .sparkle {
   width: 22px; height: 22px;
   border-radius: 6px;
-  background: #3EC3F2;
+  background: #FFCE00;
   color: #1A1814;
   display: inline-flex; align-items: center; justify-content: center;
   font-weight: 800;
@@ -6594,7 +6604,7 @@ html { scroll-behavior: smooth; }
   display: flex; flex-direction: column; align-items: center; gap: .3rem;
   text-align: center;
 }
-.flota-prod:hover { background: #3EC3F222; border-color: #3EC3F2; }
+.flota-prod:hover { background: #FFCE0022; border-color: #FFCE00; }
 .flota-prod.sel { background: #1A1814; border-color: #1A1814; color: #FFFFFF; }
 .flota-prod .ic { font-size: 1.3rem; line-height: 1; }
 .flota-prod .lb {
@@ -6607,7 +6617,7 @@ html { scroll-behavior: smooth; }
 .flota-cta {
   margin-top: .5rem;
   padding: 1rem 1.2rem;
-  background: linear-gradient(135deg, #FF6B00, #3EC3F2);
+  background: linear-gradient(135deg, #FF6B00, #FFCE00);
   color: #0E1117;
   font-family: 'Inter Tight', sans-serif;
   font-weight: 700;
@@ -6790,7 +6800,7 @@ html { scroll-behavior: smooth; }
 .lw-form-submit {
   margin-top: .8rem;
   padding: 1rem 1.4rem;
-  background: linear-gradient(135deg, #FF6B00, #3EC3F2);
+  background: linear-gradient(135deg, #FF6B00, #FFCE00);
   color: #0E1117;
   font-family: 'Inter Tight', sans-serif;
   font-weight: 700;
@@ -6914,18 +6924,14 @@ function Sidebar({ section, setSection, onClickItem }) {
     { name: 'F · Web madre · arquitectura', items: [
       { id: 'webmother',   num: 'W.0',  label: '🏗 Web madre · preview' }
     ] },
-    { name: 'G · 5 propuestas de web (full)', featured: true, badge: 'W.5 RECOMENDADA ★', items: [
-      { id: 'styles-ovr',      num: 'W.X', label: '🎨 Overview · 5 direcciones' },
-      { id: 'web-taller',      num: 'W.1', label: '🏭 W.1 · Industrial Editorial',           accent: '#FF6B00' },
-      { id: 'web-pop',         num: 'W.2', label: '📋 W.2 · Catálogo Pro Rental',            accent: '#FFCE00' },
-      { id: 'web-verde',       num: 'W.3', label: '📡 W.3 · Fleet OS · Datos en Vivo',       accent: '#3EC3F2' },
-      { id: 'web-digitalscut', num: 'W.4', label: '✨ W.4 · Digitals Cut',                    accent: '#FF6B00' },
+    { name: 'G · 2 propuestas de web (full)', featured: true, badge: 'W.5 RECOMENDADA ★', items: [
+      { id: 'web-digitalscut', num: 'W.4', label: '✨ W.4 · Digitals Cut',                    accent: '#FFCE00' },
       { id: 'web-tailored-v2', num: 'W.5', label: '★ W.5 · Tailored V2 · amarillo + negro ALO',  accent: '#FFCE00' }
     ] },
     { name: 'H · Sistemas gráficos RRSS', featured: true, items: [
       { id: 'rrss-taller', num: 'R.1',  label: '📷 RRSS · Faena Real',                accent: '#FF6B00' },
       { id: 'rrss-pop',    num: 'R.2',  label: '📋 RRSS · Catálogo Rotación',         accent: '#FFCE00' },
-      { id: 'rrss-verde',  num: 'R.3',  label: '📡 RRSS · Fleet OS Datos',            accent: '#3EC3F2' },
+      { id: 'rrss-verde',  num: 'R.3',  label: '📡 RRSS · Fleet OS Datos',            accent: '#FFCE00' },
       { id: 'rrss-tryon',  num: 'R.4',  label: '🎯 RRSS · Ready-to-post con texto ★', accent: '#FF6B00' }
     ] },
     { name: 'J · 9 sucursales + LATAM', items: [
@@ -7171,7 +7177,7 @@ function LogoSection() {
             <img src={L.asset} alt="Logo ALO Rental" style={{ maxWidth: '85%', maxHeight: '85%' }}/>
             <span className="lbl">ORIGINAL · LOGO ACTUAL</span>
           </div>
-          <div className="logo-vis-card brand tilt" style={{ background: 'linear-gradient(135deg, #FF6B00, #3EC3F2)', padding: '1.5rem' }}>
+          <div className="logo-vis-card brand tilt" style={{ background: 'linear-gradient(135deg, #FF6B00, #FFCE00)', padding: '1.5rem' }}>
             <img src={L.asset} alt="Logo ALO Rental" style={{ maxWidth: '85%', maxHeight: '85%', mixBlendMode: 'multiply' }}/>
             <span className="lbl">SOBRE MARCA</span>
           </div>
@@ -7358,7 +7364,7 @@ function CommSection() {
       cycle: '1 a 6 semanas · proyecto único alto valor + posibles repeticiones'
     },
     {
-      name: 'Sofía A.', role: 'Sustainability Officer · corporativo', accent: '#3EC3F2', avatar: 'S',
+      name: 'Sofía A.', role: 'Sustainability Officer · corporativo', accent: '#FFCE00', avatar: 'S',
       quote: '"Mi CFO necesita uptime real y reporte ESG de mi flota arrendada en un PDF firmable."',
       jtbd: 'Cerrar la cotización con anexo ESG verificable que ahorre 4 semanas de research del equipo de sustainability.',
       worries: 'Que el reporte sea inflado. Que no haya auditoría externa. Que el partner no responda Q2.',
@@ -7632,7 +7638,7 @@ function GraphicSection() {
         <div className="moods-row">
           {g.moods.map(m => (
             <div key={m.id} className="mood-card tilt"
-              style={{ '--mood-bg': m.id === 'taller' ? 'linear-gradient(135deg, #FF6B00, transparent)' : m.id === 'editorial' ? 'linear-gradient(135deg, #F2EFE6, transparent)' : m.id === 'pop' ? 'linear-gradient(135deg, #3EC3F2, #FF6B00)' : 'linear-gradient(135deg, #FFCE00, transparent)' }}>
+              style={{ '--mood-bg': m.id === 'taller' ? 'linear-gradient(135deg, #FF6B00, transparent)' : m.id === 'editorial' ? 'linear-gradient(135deg, #F2EFE6, transparent)' : m.id === 'pop' ? 'linear-gradient(135deg, #FFCE00, #FF6B00)' : 'linear-gradient(135deg, #FFCE00, transparent)' }}>
               <div className="lbl">— MOOD · {m.id.toUpperCase()}</div>
               <h4>{m.name}</h4>
               <div className="tag">{m.tag}</div>
@@ -7858,7 +7864,7 @@ function MotherWebSection() {
                   <h4>ALO Rental · Pro</h4>
                   <p>Tijeras, telescópico, articulado, JLG, operación 24/7. Para activaciones, eventos, marcas con vida operativa.</p>
                 </div>
-                <div className="mock-cap-card" style={{ '--card-accent': '#3EC3F2' }}>
+                <div className="mock-cap-card" style={{ '--card-accent': '#FFCE00' }}>
                   <div className="ix">— MERCH</div>
                   <h4>ALO Rental · Flota</h4>
                   <p>Rental B2B B2B premium. Kits onboarding, regalo cliente, uniformes corporativos. Cotización en menos de 24h.</p>
@@ -9343,15 +9349,15 @@ function DigitalsCutSection() {
         title="Digitals Cut · <em>recomendada</em> ★"
         desc="La 4ta versión es la que recomendamos al cierre. Toma la dirección Taller Editorial (W.1) como base + integra el widget Flota B2B en vivo + suma un bloque interactivo de casos editoriales (Codelco · sostenibilidad ESG · prensa) optimizado para SEO clásico + AEO (citas en LLMs) + GEO (Generative Engine Optimization). Es ALO Rental preparada para 2027 sin abandonar lo que hizo bien estos 4 años."/>
 
-      <div className="preview-note" style={{ borderColor: '#3EC3F2', background: 'rgba(242,193,43,0.06)', color: '#3EC3F2' }}>
+      <div className="preview-note" style={{ borderColor: '#FFCE00', background: 'rgba(242,193,43,0.06)', color: '#FFCE00' }}>
         <b>— RECOMENDADA. </b>
-        Esta versión combina los mejores activos de las propuestas anteriores: oficio editorial (W.1) + widget interactivo (L.3) + sostenibilidad ESG (W.3) + caso Codelco Â· DivisiÃ³n Andina como prensa pop. <span className="arrow" style={{ color: '#3EC3F2' }}>→</span> Optimizada para que aparezca en búsquedas Google + sea citada por LLMs (ChatGPT, Claude, Gemini) + capture lead B2B premium.
+        Esta versión combina los mejores activos de las propuestas anteriores: oficio editorial (W.1) + widget interactivo (L.3) + sostenibilidad ESG (W.3) + caso Codelco Â· DivisiÃ³n Andina como prensa pop. <span className="arrow" style={{ color: '#FFCE00' }}>→</span> Optimizada para que aparezca en búsquedas Google + sea citada por LLMs (ChatGPT, Claude, Gemini) + capture lead B2B premium.
       </div>
 
       <div className="dc-shell">
         <div className="browser-bar">
           <div className="dot" style={{ background: '#FF5A3C' }}/>
-          <div className="dot" style={{ background: '#3EC3F2' }}/>
+          <div className="dot" style={{ background: '#FFCE00' }}/>
           <div className="dot" style={{ background: '#A3E635' }}/>
           <div className="url">— alorental.cl · digitals cut · recomendada</div>
         </div>
@@ -9363,8 +9369,8 @@ function DigitalsCutSection() {
           </video>
           <div className="dc-nav">
             <div style={{ display: 'flex', alignItems: 'center', gap: '.7rem' }}>
-              <img src="assets/logo/alo-rental-logo-amarillo.webp" alt="alo rental" style={{ height: 52, width: 'auto', objectFit: 'contain', borderRadius: 10, background: 'rgba(255,255,255,0.94)', padding: 5 }}/>
-              <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.55rem', letterSpacing: '.22em', color: '#3EC3F2' }}>· DIGITALS CUT</span>
+              <img src="assets/logo/alo-rental-logo-amarillo.webp" alt="ALO Rental" style={{ height: 56, width: 'auto', objectFit: 'contain', filter: 'brightness(0) invert(1) drop-shadow(0 4px 14px rgba(255,206,0,0.40))' }}/>
+              <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.6rem', letterSpacing: '.24em', color: '#FFCE00', fontWeight: 800 }}>· DIGITALS CUT</span>
             </div>
             <div className="dc-menu">
               <span>OFICIO</span>
@@ -9432,52 +9438,52 @@ function DigitalsCutSection() {
           </div>
         </div>
 
-        {/* CASOS BLOG · interactive · SEO/AEO/GEO friendly */}
+        {/* BLOG ALTURA · contenido editorial del rubro */}
         <div className="dc-section bg-dark">
-          <span className="dc-kicker">— BLOG · CASOS EDITORIALES</span>
-          <h2>Lo que <em>contamos</em> también es lo que Google y los LLMs citan.</h2>
-          <p className="dc-sub">Cada caso publicado es contenido SEO + activo de AEO (Answer Engine Optimization). Cuando un comprador pregunta a ChatGPT por proveedores de arriendo serio en Chile, ALO Rental aparece porque tenemos las URLs, los casos, las métricas y la prensa.</p>
+          <span className="dc-kicker">— BLOG ALO · NOTICIAS DEL RUBRO ALTURA</span>
+          <h2>Cada faena cuenta · <em>la altura tiene historias.</em></h2>
+          <p className="dc-sub">El blog donde compartimos casos reales de faena, novedades de la flota JLG y ALO Lift, normativa DS 594, tendencias del arriendo industrial y la mirada de ALO Group LATAM. Contenido escrito por quienes operan los equipos · no por marketing genérico.</p>
 
           <div className="dc-seo-ribbon">
-            <span className="seo-badge">★ SEO + AEO + GEO</span>
-            <p>Schema Article + FAQ + LocalBusiness + Person en cada caso. <b>Estructurado para que LLMs citen</b> · headlines factuales · datos verificables · fuentes nombradas. Resultado esperado: aparecer en respuestas de ChatGPT/Claude/Gemini cuando preguntan por arriendo industrial en Chile.</p>
+            <span className="seo-badge">★ 4 PILARES DE CONTENIDO</span>
+            <p><b>Casos · faena reales</b> con métricas + permiso firmado. <b>Flota · novedades técnicas</b> de JLG y ALO Lift al llegar. <b>Normativa · DS 594</b> + ANSI A92.20 explicados simple. <b>LATAM · ALO Group</b> con la mirada regional y ranking Access 50 KHL.</p>
           </div>
 
           <div className="dc-casos-grid">
-            <div className="dc-caso big" style={{ backgroundImage: 'url(assets/rrss/tinydesk-31min.png)' }}>
+            <div className="dc-caso big" style={{ backgroundImage: 'url(assets/img/hero-faena-jlg.png)' }}>
               <div className="caso-meta">
-                <span className="caso-tag">CASO ESTRELLA · TV NACIONAL</span>
-                <h4>Equipamos a Codelco para el último División Andina.</h4>
-                <p className="caso-excerpt">Producción exprés de equipos custom · materialidad de cámara HD · libreta de color del show respetada · permission management cuidado. La pieza editorial más fuerte de los últimos 12 meses.</p>
+                <span className="caso-tag">CASOS · MINERÍA</span>
+                <h4>Codelco · División Andina · 24 equipos · 14 meses sin accidentes.</h4>
+                <p className="caso-excerpt">Flota dedicada de brazos articulados y telescópicos para acceso a estructuras de molienda. Operadores certificados DS 594. Mantención on-site con SLA 4h. Contrato extendido por 12 meses adicionales tras el primer año.</p>
                 <a className="caso-link">LEER CASO COMPLETO →</a>
-              </div>
-            </div>
-            <div className="dc-caso" style={{ backgroundImage: 'url(assets/img/hero-faena-jlg-alt.png)' }}>
-              <div className="caso-meta">
-                <span className="caso-tag">ECONOMÍA CIRCULAR</span>
-                <h4>Cómo nuestra flota eléctrica reduce 42% el CO2 en faena.</h4>
-                <a className="caso-link">VER REPORTE Q1 →</a>
-              </div>
-            </div>
-            <div className="dc-caso" style={{ backgroundImage: 'url(assets/img/catalogo-equipos.png)' }}>
-              <div className="caso-meta">
-                <span className="caso-tag">FESTIVAL · ACTIVACIÓN</span>
-                <h4>Flota dedicada Codelco · 24 equipos por 14 meses sin accidentes.</h4>
-                <a className="caso-link">VER PROCESO →</a>
               </div>
             </div>
             <div className="dc-caso" style={{ backgroundImage: 'url(assets/rrss/latam-169.png)' }}>
               <div className="caso-meta">
-                <span className="caso-tag">PRENSA · ENTREVISTA</span>
-                <h4>Sebastián Martínez · de Remind a ALO Rental en 4 años.</h4>
-                <a className="caso-link">LEER ENTREVISTA →</a>
+                <span className="caso-tag">LATAM · ALO GROUP</span>
+                <h4>Access 50 KHL · #22 LATAM en 2025.</h4>
+                <a className="caso-link">VER RANKING →</a>
+              </div>
+            </div>
+            <div className="dc-caso" style={{ backgroundImage: 'url(assets/img/catalogo-equipos.png)' }}>
+              <div className="caso-meta">
+                <span className="caso-tag">FLOTA · JLG</span>
+                <h4>ALO Lift 34 AJ X · brazo articulado 34m disponible.</h4>
+                <a className="caso-link">VER FICHA →</a>
               </div>
             </div>
             <div className="dc-caso" style={{ backgroundImage: 'url(assets/rrss/ficha-tijera-11.png)' }}>
               <div className="caso-meta">
-                <span className="caso-tag">B2B · ONBOARDING</span>
-                <h4>Kit nuevo empleado · 200 ingresos/mes con marca retail.</h4>
-                <a className="caso-link">VER CASO →</a>
+                <span className="caso-tag">NORMATIVA · DS 594</span>
+                <h4>Operador certificado · qué pide la ley en faena minera.</h4>
+                <a className="caso-link">LEER GUÍA →</a>
+              </div>
+            </div>
+            <div className="dc-caso" style={{ backgroundImage: 'url(assets/sucursales/iquique.webp)' }}>
+              <div className="caso-meta">
+                <span className="caso-tag">COBERTURA · NORTE</span>
+                <h4>Iquique · faena minera con flota dedicada en 24h.</h4>
+                <a className="caso-link">VER SUCURSAL →</a>
               </div>
             </div>
           </div>
@@ -9552,7 +9558,7 @@ function DigitalsCutSection() {
         {/* CTA FINAL */}
         <div className="dc-cta-final">
           <div className="content">
-            <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '0.68rem', letterSpacing: '0.22em', color: '#3EC3F2', display: 'inline-block', marginBottom: '1rem', textTransform: 'uppercase' }}>— RESERVA HOY · TU EQUIPO LLEGA MAÑANA</span>
+            <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '0.68rem', letterSpacing: '0.22em', color: '#FFCE00', display: 'inline-block', marginBottom: '1rem', textTransform: 'uppercase' }}>— RESERVA HOY · TU EQUIPO LLEGA MAÑANA</span>
             <h2>Tu proyecto no puede detenerse · <em>siempre a su altura.</em></h2>
             <p>Cotización en menos de 4 horas hábiles. Despacho 24h RM · 48-72h regiones. 20 años representando oficialmente a JLG · 2.050+ equipos en flota · 9 sucursales activas.</p>
             <div className="ctas">
@@ -10017,7 +10023,7 @@ function LandFlotaWidgetSection() {
       <div className="lw-shell">
         <div className="lw-browser">
           <div className="dot" style={{ background: '#FF5A3C' }}/>
-          <div className="dot" style={{ background: '#3EC3F2' }}/>
+          <div className="dot" style={{ background: '#FFCE00' }}/>
           <div className="dot" style={{ background: '#A3E635' }}/>
           <div className="url">— alorental.cl/flota-b2b</div>
         </div>
@@ -10206,7 +10212,7 @@ function LandFlotaWidgetSection() {
               { tag: 'RETAIL · ONBOARDING', title: 'Kit nuevo empleado mensual', desc: 'Marca con 200 ingresos al mes · pañoleta + manta + tote a brand book · entrega a domicilio.', metric: '+600 kits / trimestre' }
             ].map((c, i) => (
               <div key={i} style={{ padding: '1.6rem 1.5rem', background: '#FFFFFF', border: '1px solid rgba(26,24,20,0.08)', borderRadius: '14px', boxShadow: '0 14px 28px -12px rgba(0,0,0,0.12)' }}>
-                <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '0.58rem', letterSpacing: '0.18em', color: '#3EC3F2', background: 'rgba(242,193,43,0.14)', padding: '.3rem .55rem', borderRadius: '4px', display: 'inline-block', marginBottom: '.85rem', textTransform: 'uppercase', fontWeight: 700 }}>{c.tag}</div>
+                <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '0.58rem', letterSpacing: '0.18em', color: '#FFCE00', background: 'rgba(242,193,43,0.14)', padding: '.3rem .55rem', borderRadius: '4px', display: 'inline-block', marginBottom: '.85rem', textTransform: 'uppercase', fontWeight: 700 }}>{c.tag}</div>
                 <h6 style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 700, fontSize: '1.2rem', color: '#1A1814', textTransform: 'uppercase', letterSpacing: '-0.01em', lineHeight: 1.15, marginBottom: '.6rem' }}>{c.title}</h6>
                 <p style={{ fontSize: '0.88rem', color: '#6A6357', lineHeight: 1.6, marginBottom: '.8rem' }}>{c.desc}</p>
                 <div style={{ paddingTop: '.6rem', borderTop: '1px dashed rgba(26,24,20,0.10)', fontFamily: 'JetBrains Mono, monospace', fontSize: '0.66rem', color: '#FF6B00', textTransform: 'uppercase', letterSpacing: '0.14em', fontWeight: 700 }}>→ {c.metric}</div>
@@ -10217,13 +10223,13 @@ function LandFlotaWidgetSection() {
 
         {/* FORMULARIO COTIZACIÓN */}
         <div className="lw-section" id="flota-form" style={{ background: '#0E1117', color: '#F2EFE6' }}>
-          <span className="lw-section-kicker" style={{ color: '#3EC3F2' }}>— COTIZACIÓN EXPRESS</span>
-          <h2 style={{ color: '#F2EFE6' }}>Brief en <em style={{ color: '#3EC3F2' }}>30 segundos</em>.</h2>
+          <span className="lw-section-kicker" style={{ color: '#FFCE00' }}>— COTIZACIÓN EXPRESS</span>
+          <h2 style={{ color: '#F2EFE6' }}>Brief en <em style={{ color: '#FFCE00' }}>30 segundos</em>.</h2>
           <p className="lw-section-sub" style={{ color: 'rgba(244,236,220,0.7)' }}>Cuéntanos qué necesitás producir. Te respondemos con cotización + mockup en menos de 24 horas hábiles.</p>
 
           <div className="lw-form-block">
             <div className="lw-form-meta" style={{ color: '#F2EFE6' }}>
-              <h3 style={{ color: '#F2EFE6' }}>Lo que recibes en <em style={{ color: '#3EC3F2' }}>24 horas hábiles</em></h3>
+              <h3 style={{ color: '#F2EFE6' }}>Lo que recibes en <em style={{ color: '#FFCE00' }}>24 horas hábiles</em></h3>
               <p style={{ color: 'rgba(244,236,220,0.7)' }}>Sin tener que llamar, sin esperar respuesta tres días. Nuestro agente IA + ejecutivo arman cotización formal con todo lo que necesitas para decidir.</p>
               <ul className="promises">
                 <li style={{ color: '#F2EFE6' }}>Cotización PDF con tu logo + precio unitario + plazo</li>
@@ -11040,17 +11046,17 @@ function AloSucursalesSection() {
           <div style={{ display: 'flex', gap: '1.2rem', flexWrap: 'wrap' }}>
             <div><div style={{ fontFamily: 'Inter Tight, sans-serif', fontSize: '1.8rem', fontWeight: 800, color: '#FF6B00', lineHeight: 1 }}>9</div><div style={{ fontSize: '.62rem', color: 'var(--ink-soft, #9B968A)', letterSpacing: '.14em', textTransform: 'uppercase' }}>SUCURSALES</div></div>
             <div><div style={{ fontFamily: 'Inter Tight, sans-serif', fontSize: '1.8rem', fontWeight: 800, color: '#FFCE00', lineHeight: 1 }}>16</div><div style={{ fontSize: '.62rem', color: 'var(--ink-soft, #9B968A)', letterSpacing: '.14em', textTransform: 'uppercase' }}>REGIONES CL</div></div>
-            <div><div style={{ fontFamily: 'Inter Tight, sans-serif', fontSize: '1.8rem', fontWeight: 800, color: '#3EC3F2', lineHeight: 1 }}>24h</div><div style={{ fontSize: '.62rem', color: 'var(--ink-soft, #9B968A)', letterSpacing: '.14em', textTransform: 'uppercase' }}>DESPACHO RM</div></div>
+            <div><div style={{ fontFamily: 'Inter Tight, sans-serif', fontSize: '1.8rem', fontWeight: 800, color: '#FFCE00', lineHeight: 1 }}>24h</div><div style={{ fontSize: '.62rem', color: 'var(--ink-soft, #9B968A)', letterSpacing: '.14em', textTransform: 'uppercase' }}>DESPACHO RM</div></div>
           </div>
         </div>
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '.8rem' }}>
         {suc.map((s, i) => (
-          <div key={s.id} className="info-card" style={{ padding: '1.2rem 1.1rem', borderTop: `3px solid ${s.zone === 'NORTE' ? '#FF6B00' : s.zone === 'CENTRO' ? '#FFCE00' : '#3EC3F2'}` }}>
+          <div key={s.id} className="info-card" style={{ padding: '1.2rem 1.1rem', borderTop: `3px solid ${s.zone === 'NORTE' ? '#FF6B00' : s.zone === 'CENTRO' ? '#FFCE00' : '#FFCE00'}` }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '.6rem' }}>
               <div>
-                <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.55rem', letterSpacing: '.18em', color: s.zone === 'NORTE' ? '#FF6B00' : s.zone === 'CENTRO' ? '#FFCE00' : '#3EC3F2', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.3rem' }}>📍 {s.zone} · REGIÓN {s.region}</div>
+                <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.55rem', letterSpacing: '.18em', color: s.zone === 'NORTE' ? '#FF6B00' : s.zone === 'CENTRO' ? '#FFCE00' : '#FFCE00', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.3rem' }}>📍 {s.zone} · REGIÓN {s.region}</div>
                 <h5 style={{ fontFamily: 'Inter Tight, sans-serif', fontSize: '1.4rem', fontWeight: 800, color: 'var(--ink, #F2EFE6)', margin: 0, letterSpacing: '-0.02em' }}>{s.name}</h5>
               </div>
               <div style={{ background: 'rgba(255,107,0,0.12)', padding: '.35rem .55rem', borderRadius: '6px', border: '1px solid rgba(255,107,0,0.3)' }}>
@@ -11099,7 +11105,7 @@ function AloLatamSection() {
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '.8rem' }}>
         {countries.map((c, i) => (
-          <div key={c.code} className="info-card" style={{ padding: '1.4rem 1.2rem', borderTop: `4px solid ${c.code === 'CL' ? '#FF6B00' : i % 2 === 0 ? '#FFCE00' : '#3EC3F2'}` }}>
+          <div key={c.code} className="info-card" style={{ padding: '1.4rem 1.2rem', borderTop: `4px solid ${c.code === 'CL' ? '#FF6B00' : i % 2 === 0 ? '#FFCE00' : '#FFCE00'}` }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '.7rem' }}>
               <div>
                 <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.6rem', letterSpacing: '.22em', color: c.code === 'CL' ? '#FF6B00' : 'var(--ink-soft, #9B968A)', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.3rem' }}>{c.code} · DESDE {c.since}</div>
@@ -11211,7 +11217,7 @@ function LandRecomendadorIASection() {
             {[
               { obra: 'Reparación fachada edificio · 18 pisos', input: 'Altura 40m+ · Exterior · Obstáculos: sí · Carga: no', rec: 'Brazo Articulado JLG 1500AJP', match: 94, c: '#FFCE00' },
               { obra: 'Mantención interior centro comercial', input: 'Altura menos de 10m · Interior · Obstáculos: no · Carga: no', rec: 'Tijera eléctrica JLG 1932R', match: 96, c: '#FF6B00' },
-              { obra: 'Bodega + racks · pallets a 12m', input: 'Altura 10-20m · Interior · Obstáculos: no · Carga: sí', rec: 'Manipulador Telescópico JLG 4017', match: 91, c: '#3EC3F2' }
+              { obra: 'Bodega + racks · pallets a 12m', input: 'Altura 10-20m · Interior · Obstáculos: no · Carga: sí', rec: 'Manipulador Telescópico JLG 4017', match: 91, c: '#FFCE00' }
             ].map((c, i) => (
               <div key={i} style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '14px', padding: '1.4rem 1.4rem', border: `1px solid ${c.c}40`, borderLeft: `4px solid ${c.c}` }}>
                 <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '.65rem', letterSpacing: '.14em', color: c.c, textTransform: 'uppercase', fontWeight: 800, marginBottom: '.5rem' }}>CASO {i + 1}</div>
@@ -11247,6 +11253,11 @@ function LandRecomendadorIASection() {
 function WebTailoredV2Section() {
   return (
     <section>
+      <style>{`
+        .v2-3d-card:hover { transform: translateY(-8px) rotateX(6deg) rotateY(-4deg) scale(1.04); box-shadow: 0 40px 80px -16px rgba(255,206,0,0.55), 0 0 0 2px rgba(255,206,0,0.45); filter: saturate(1.15); z-index: 3; }
+        .v2-3d-card:hover h4 { transform: translateZ(60px); }
+        .v2-3d-card h4 { transition: transform .45s cubic-bezier(.2,.7,.2,1); }
+      `}</style>
       <SectionHead num="W.5"
         title="W.5 · Tailored Digitals V2 · <em>actualización paleta REAL alorental.cl</em> ★"
         desc="Misma idea que W.4 Digitals Cut pero ahora 100% alineada a la paleta y tono visual del sitio actual de alorental.cl: amarillo signature como background principal · negro corporate · acentos ALO orange · rojo equipos. Modernización, no rebrand. Mantenemos lo que el mercado ya reconoce."/>
@@ -11331,13 +11342,34 @@ function WebTailoredV2Section() {
           <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
             <h2 style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '2.6rem', color: '#0E1117', lineHeight: 1.05, letterSpacing: '-0.02em' }}>Estamos en cada una de las <em style={{ fontStyle: 'normal' }}>áreas industriales del país</em></h2>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '.7rem' }}>
+          <div className="v2-3d-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '.7rem', perspective: '1400px' }}>
             {['Minería', 'Retail', 'Forestal', 'Construcción', 'Vialidad', 'Energía', 'Puertos', 'Bodegaje'].map((ind, i) => (
-              <div key={i} style={{ aspectRatio: '4/3', borderRadius: '10px', background: '#0E1117', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', overflow: 'hidden' }}>
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(255,107,0,0.20), rgba(14,17,23,0.85)), url(assets/img/hero-faena-jlg.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}/>
-                <h4 style={{ position: 'relative', zIndex: 2, fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '1.4rem', color: '#FFFFFF', letterSpacing: '-0.01em' }}>{ind}</h4>
+              <div key={i} className="v2-3d-card" style={{ aspectRatio: '4/3', borderRadius: '12px', background: '#0E1117', position: 'relative', overflow: 'hidden', transformStyle: 'preserve-3d', transition: 'transform .45s cubic-bezier(.2,.7,.2,1), box-shadow .45s, filter .45s', cursor: 'pointer', willChange: 'transform' }}>
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(255,107,0,0.30), rgba(14,17,23,0.78)), url(assets/img/hero-faena-jlg.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}/>
+                <h4 style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 2, fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '1.4rem', color: '#FFFFFF', letterSpacing: '-0.01em', transform: 'translateZ(40px)' }}>{ind}</h4>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* VIDEO HERO REAL · ALO Lift en faena · efecto cinematográfico inline */}
+        <div style={{ background: '#0E1117', padding: '3.5rem 2.5rem', position: 'relative', overflow: 'hidden' }}>
+          <div style={{ position: 'absolute', top: '20%', right: '5%', width: 300, height: 300, borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,206,0,0.25), transparent 70%)', pointerEvents: 'none', filter: 'blur(40px)' }}/>
+          <div style={{ position: 'relative', zIndex: 2, display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '2.5rem', alignItems: 'center' }}>
+            <div>
+              <span style={{ display: 'inline-block', background: '#FFCE00', color: '#0E1117', padding: '.4rem .9rem', borderRadius: '999px', fontFamily: 'Inter, sans-serif', fontWeight: 800, fontSize: '.7rem', letterSpacing: '.08em', textTransform: 'uppercase', marginBottom: '1rem' }}>🎬 VIDEO HERO · LOOP CINEMATOGRÁFICO</span>
+              <h3 style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '2.6rem', color: '#FFFFFF', lineHeight: 1.05, letterSpacing: '-0.02em', marginBottom: '.8rem' }}>Cada equipo · <em style={{ fontStyle: 'normal', color: '#FFCE00' }}>fotografiado en faena real.</em></h3>
+              <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.78)', lineHeight: 1.55, marginBottom: '1.2rem' }}>Loop de 12 segundos · brazos articulados JLG operando en faena minera real. Sin retoque, sin render. Lo que arriendas es lo que ves antes de cotizar.</p>
+              <div style={{ display: 'flex', gap: '.6rem', flexWrap: 'wrap' }}>
+                <span style={{ background: 'rgba(255,206,0,0.10)', border: '1px solid rgba(255,206,0,0.35)', color: '#FFCE00', padding: '.4rem .8rem', borderRadius: '999px', fontFamily: 'JetBrains Mono, monospace', fontSize: '.7rem', letterSpacing: '.1em', fontWeight: 700, textTransform: 'uppercase' }}>1080p · 12s</span>
+                <span style={{ background: 'rgba(255,107,0,0.10)', border: '1px solid rgba(255,107,0,0.35)', color: '#FF6B00', padding: '.4rem .8rem', borderRadius: '999px', fontFamily: 'JetBrains Mono, monospace', fontSize: '.7rem', letterSpacing: '.1em', fontWeight: 700, textTransform: 'uppercase' }}>AUTOPLAY MUTED</span>
+              </div>
+            </div>
+            <div style={{ borderRadius: '14px', overflow: 'hidden', border: '2px solid rgba(255,206,0,0.35)', boxShadow: '0 30px 80px -20px rgba(255,206,0,0.30)', transform: 'perspective(1400px) rotateY(-3deg) rotateX(2deg)' }}>
+              <video autoPlay muted loop playsInline controls preload="auto" style={{ width: '100%', display: 'block', aspectRatio: '16/9', objectFit: 'cover', background: '#000' }}>
+                <source src="assets/video/alo-hero-1.mp4" type="video/mp4"/>
+              </video>
+            </div>
           </div>
         </div>
 
@@ -11523,10 +11555,6 @@ function App() {
       case 'google':     return <GoogleSection/>;
       case 'meta':       return <MetaSection/>;
       case 'webmother':  return <MotherWebSection/>;
-      case 'styles-ovr': return <StylesOverviewSection setSection={setSection}/>;
-      case 'web-taller': return <WebStyleSection styleId="taller"/>;
-      case 'web-pop':    return <WebStyleSection styleId="pop"/>;
-      case 'web-verde':  return <WebStyleSection styleId="verde"/>;
       case 'web-digitalscut': return <DigitalsCutSection/>;
       case 'rrss-taller':return <RrssSection propId="rrss-taller"/>;
       case 'rrss-pop':   return <RrssSection propId="rrss-pop"/>;
