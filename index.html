@@ -6930,12 +6930,7 @@ function Sidebar({ section, setSection, onClickItem }) {
       { id: 'web-digitalscut', num: 'W.4', label: '✨ W.4 · Digitals Cut',                    accent: '#FFCE00' },
       { id: 'web-tailored-v2', num: 'W.5', label: '★ W.5 · Tailored V2 · amarillo + negro ALO',  accent: '#FFCE00' }
     ] },
-    { name: 'H · Roadmap + Inversión', items: [
-      { id: 'eco',        num: '07.0', label: '🌱 Línea ESG · flota eléctrica' },
-      { id: 'roadmap',    num: '07.1', label: '🛣 Roadmap 12 meses' },
-      { id: 'invest',     num: '07.2', label: '💰 Inversión · 4 tiers' }
-    ] },
-    { name: 'I · Showcase + Cierre', items: [
+    { name: 'H · Showcase + Cierre', items: [
       { id: 'showcase', num: 'S.0', label: '🎬 Showcase · gráficas + videos' }
     ] }
   ];
@@ -7208,7 +7203,7 @@ function LogoSection() {
       {/* PROPUESTA DE RENAME */}
       <div style={{ marginTop: '3rem', marginBottom: '1.2rem', display: 'flex', alignItems: 'baseline', gap: '1rem', flexWrap: 'wrap' }}>
         <span className="tag-pill" style={{ background: 'rgba(242,193,43,0.10)', borderColor: 'rgba(242,193,43,0.30)', color: 'var(--accent3)' }}>PROPUESTA · RENAME ESTRATÉGICO</span>
-        <span style={{ fontFamily: 'JetBrains Mono', fontSize: '0.6rem', letterSpacing: '0.18em', color: 'var(--ink-soft)', textTransform: 'uppercase' }}>VALIDAR CON PRISCILA</span>
+        <span style={{ fontFamily: 'JetBrains Mono', fontSize: '0.6rem', letterSpacing: '0.18em', color: 'var(--ink-soft)', textTransform: 'uppercase' }}>VALIDAR CON ALO RENTAL</span>
       </div>
 
       <div className="rename-block tilt">
@@ -8338,7 +8333,7 @@ function VerdeBody({ s }) {
           <p>La decisión no fue marketing. Fue técnica: si la flota se mide por equipo, se mide su consumo. Si se mide el consumo, se compara eléctrico vs diésel. Si se compara, el mandante decide con dato. Si lo reportamos, certificamos.</p>
           <div className="quote">"No nos hace una marca verde. Nos hace una marca honesta · medible. Que no es lo mismo."</div>
           <p>Reportamos CO2eq evitado por flota eléctrica, horas de operación reportadas, operadores certificados y mandantes con reporte mensual cada trimestre, públicamente. Si te interesa el dataset, abajo está el PDF descargable con todas las cifras de uptime y CO2. Sin maquillar.</p>
-          <p style={{ fontFamily: 'JetBrains Mono', fontSize: '0.78rem', letterSpacing: '0.1em', color: 'var(--style-accent)', textTransform: 'uppercase' }}>— PRISCILA + EQUIPO LA ESTAMPA</p>
+          <p style={{ fontFamily: 'JetBrains Mono', fontSize: '0.78rem', letterSpacing: '0.1em', color: 'var(--style-accent)', textTransform: 'uppercase' }}>— EQUIPO ALO RENTAL</p>
         </div>
       </div>
 
@@ -9162,7 +9157,7 @@ function RrssSection({ propId }) {
 
           {/* SAMPLE POST · LinkedIn editorial */}
           <div style={{ marginTop: '1.4rem', marginBottom: '.5rem' }}>
-            <span className="tag-pill" style={{ background: accent + '20', borderColor: accent + '50', color: accent }}>LINKEDIN · POST EDITORIAL DE PRISCILA</span>
+            <span className="tag-pill" style={{ background: accent + '20', borderColor: accent + '50', color: accent }}>LINKEDIN · POST EDITORIAL ALO RENTAL</span>
           </div>
           <div className="rrss-sample-post tilt">
             <div className="sp-head">
@@ -9233,7 +9228,7 @@ function LandTijerasSection() {
           </div>
           <div className="land-mock-hero">
             <div className="nav-row">
-              <div className="brand">LA ESTAMPA<span style={{ color: 'var(--accent)' }}>·</span>TEXTIL</div>
+              <div className="brand">ALO<span style={{ color: 'var(--accent)' }}>·</span>RENTAL</div>
               <div>WhatsApp · +56 9 · · · · ·</div>
             </div>
             <div className="kicker">— ESTAMPADO · SERIGRAFÍA · JLG · SUBLIMACIÓN</div>
@@ -9253,7 +9248,7 @@ function LandTijerasSection() {
             </div>
           </div>
           <div className="land-mock-row">
-            <div className="row-kick">— POR QUÉ LA ESTAMPA</div>
+            <div className="row-kick">— POR QUÉ ALO RENTAL</div>
             <div className="row-grid">
               <div className="row-cell"><h5>equipos JLG</h5><p>Certificados industriales. Gestión de color profesional.</p></div>
               <div className="row-cell"><h5>Deadline real</h5><p>Cotización en 4h · despacho 24h RM · 48-72h regiones. Lo que prometemos, lo cumplimos.</p></div>
@@ -9522,21 +9517,21 @@ function DigitalsCutSection() {
           </div>
         </div>
 
-        {/* TESTIMONIOS PREMIUM */}
+        {/* TESTIMONIOS PREMIUM · sólo casos de arriendo industrial */}
         <div className="dc-section bg-cream">
-          <span className="dc-kicker">— LO QUE DICEN MARCAS QUE YA CONFIARON</span>
-          <h2>Tres voces · <em>tres veces</em> que el deadline se cumplió.</h2>
+          <span className="dc-kicker">— LO QUE DICEN EMPRESAS QUE YA CONFIARON</span>
+          <h2>Tres voces · <em>tres faenas</em> que no se detuvieron.</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginTop: '1.4rem' }}>
             {[
-              { qm: '"', text: 'Necesitábamos 6 brazos articulados con operadores certificados para la mantención del puente. ALO los tenía disponibles, los entregaron en 36h con operadores DS 594. Cero parada.', n: 'C', name: 'Carlos M.', role: 'Jefe de proyecto · constructora' },
-              { qm: '"', text: 'Pedimos kits onboarding mensuales para nuestros 200 ingresos. Manta + pañoleta + tote, todo a brand book. Tres meses sin un solo error de talla o color. Y la línea ESG le agregó valor narrativo al kit.', n: 'M', name: 'Matías L.', role: 'Head of People · retail nacional' },
-              { qm: '"', text: 'Queríamos cubrealarmas con la gráfica del lanzamiento y prevención nos rebotó el primer proveedor por flama. ALO Rental volvió a fabricar con articulado reforzada UV en 4 días. Mejor que el inicial.', n: 'F', name: 'Francisca H.', role: 'Brand Manager · inmobiliaria premium' }
+              { qm: '"', text: 'Necesitábamos 6 brazos articulados con operadores certificados para mantención de estructuras en altura. ALO los tenía disponibles y los entregaron en 36 horas con operadores DS 594. Cero parada de obra.', n: 'C', name: 'Carlos M.', role: 'Jefe de proyecto · constructora' },
+              { qm: '"', text: 'Operamos faena minera en División Andina y la flota de tijeras + manipuladores ALO ha estado 14 meses sin un solo accidente registrable. Mantención on-site con SLA 4 horas. Contrato renovado por 12 meses.', n: 'R', name: 'Rodrigo P.', role: 'Superintendente · operación minera' },
+              { qm: '"', text: 'Trabajamos coberturas viales en autopistas concesionadas. Los camiones alzahombres llegan a la hora exacta del corte programado, todos con operador y respaldo técnico. En 3 años no nos han fallado una entrega.', n: 'F', name: 'Felipe O.', role: 'Jefe de mantención · vialidad concesionada' }
             ].map((q, i) => (
               <div key={i} style={{ padding: '1.8rem 1.6rem', background: '#FFFFFF', border: '1px solid rgba(26,24,20,0.08)', borderRadius: '14px', boxShadow: '0 10px 24px -10px rgba(0,0,0,0.10)' }}>
-                <div style={{ fontFamily: 'Instrument Serif, serif', fontStyle: 'italic', fontSize: '4rem', lineHeight: '.3', color: '#FF6B00', marginBottom: '1rem' }}>{q.qm}</div>
+                <div style={{ fontFamily: 'Instrument Serif, serif', fontStyle: 'italic', fontSize: '4rem', lineHeight: '.3', color: '#FFCE00', marginBottom: '1rem' }}>{q.qm}</div>
                 <div style={{ fontFamily: 'Instrument Serif, serif', fontStyle: 'italic', fontSize: '1.05rem', lineHeight: 1.5, color: '#1A1814', marginBottom: '1.2rem' }}>{q.text}</div>
                 <div style={{ display: 'grid', gridTemplateColumns: '40px 1fr', gap: '.8rem', alignItems: 'center', paddingTop: '1rem', borderTop: '1px dashed rgba(26,24,20,0.10)' }}>
-                  <div style={{ width: 40, height: 40, borderRadius: '50%', background: '#FF6B00', color: '#FFFFFF', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'Inter Tight, sans-serif', fontWeight: 800, fontSize: '1rem' }}>{q.n}</div>
+                  <div style={{ width: 40, height: 40, borderRadius: '50%', background: '#0E1117', color: '#FFCE00', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'Inter Tight, sans-serif', fontWeight: 800, fontSize: '1rem' }}>{q.n}</div>
                   <div>
                     <b style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 700, fontSize: '0.88rem', color: '#1A1814', textTransform: 'uppercase', letterSpacing: '-0.005em', display: 'block' }}>{q.name}</b>
                     <span style={{ fontSize: '.72rem', color: '#6A6357', letterSpacing: '0.04em' }}>{q.role}</span>
@@ -9560,109 +9555,109 @@ function DigitalsCutSection() {
           </div>
         </div>
 
-        {/* FOOTER · rich con paleta Taller + acento naranja JLG */}
-        <footer style={{ background: '#0E1117', color: '#F2EFE6', padding: '3.5rem 2.5rem 1.6rem', position: 'relative', overflow: 'hidden', borderTop: '3px solid #FF6B00' }}>
-          <div style={{ position: 'absolute', top: 0, right: 0, width: 360, height: 360, borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,90,31,0.25), transparent 70%)', pointerEvents: 'none', transform: 'translate(30%, -30%)' }}/>
-          <div style={{ position: 'absolute', bottom: 0, left: 0, width: 260, height: 260, borderRadius: '50%', background: 'radial-gradient(circle, rgba(242,193,43,0.18), transparent 70%)', pointerEvents: 'none', transform: 'translate(-25%, 30%)' }}/>
+        {/* FOOTER · paleta ALO real · amarillo signature · sin naranja */}
+        <footer style={{ background: '#0E1117', color: '#F2EFE6', padding: '3.5rem 2.5rem 1.6rem', position: 'relative', overflow: 'hidden', borderTop: '3px solid #FFCE00' }}>
+          <div style={{ position: 'absolute', top: 0, right: 0, width: 360, height: 360, borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,206,0,0.22), transparent 70%)', pointerEvents: 'none', transform: 'translate(30%, -30%)' }}/>
+          <div style={{ position: 'absolute', bottom: 0, left: 0, width: 260, height: 260, borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,206,0,0.12), transparent 70%)', pointerEvents: 'none', transform: 'translate(-25%, 30%)' }}/>
 
-          {/* MEGA HERO CTA dentro del footer */}
+          {/* MEGA HERO CTA · newsletter + contacto comercial */}
           <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: '2.5rem', alignItems: 'center', paddingBottom: '2.4rem', marginBottom: '2.4rem', borderBottom: '1px solid rgba(244,236,220,0.15)', position: 'relative', zIndex: 2 }}>
             <div>
-              <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.62rem', letterSpacing: '.24em', color: '#FF6B00', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.6rem', display: 'inline-block' }}>📩 NEWSLETTER · OFICIO · 1× MES</span>
-              <h4 style={{ fontFamily: 'Inter Tight, sans-serif', fontSize: '2rem', fontWeight: 800, letterSpacing: '-0.01em', lineHeight: 1.05, marginBottom: '.7rem' }}>Casos editoriales <em style={{ fontFamily: 'Instrument Serif, serif', fontStyle: 'italic', color: '#FF6B00', fontWeight: 400 }}>en tu inbox</em>.</h4>
-              <p style={{ fontSize: '.92rem', color: 'rgba(244,236,220,0.62)', lineHeight: 1.6, marginBottom: '1rem' }}>1 mail por mes · casos reales con métricas · plantillas de brief para tu equipo · descuentos en repeticiones. Sin spam, puedes salir cuando quieras.</p>
+              <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.62rem', letterSpacing: '.24em', color: '#FFCE00', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.6rem', display: 'inline-block' }}>📩 NEWSLETTER ALO · 1× MES</span>
+              <h4 style={{ fontFamily: 'Inter Tight, sans-serif', fontSize: '2rem', fontWeight: 800, letterSpacing: '-0.01em', lineHeight: 1.05, marginBottom: '.7rem' }}>Novedades de flota <em style={{ fontFamily: 'Instrument Serif, serif', fontStyle: 'italic', color: '#FFCE00', fontWeight: 400 }}>en tu inbox</em>.</h4>
+              <p style={{ fontSize: '.92rem', color: 'rgba(244,236,220,0.62)', lineHeight: 1.6, marginBottom: '1rem' }}>1 mail por mes · nuevos equipos JLG + ALO Lift al llegar a Chile · casos de faena reales · novedades del ranking Access 50 KHL Group. Sin spam, puedes salir cuando quieras.</p>
               <div style={{ display: 'flex', gap: '.5rem', flexWrap: 'wrap' }}>
                 <input type="email" placeholder="tu@empresa.cl" style={{ flex: 1, minWidth: 240, padding: '.95rem 1.1rem', borderRadius: '100px', border: '1px solid rgba(244,236,220,0.20)', background: 'rgba(244,236,220,0.06)', color: '#F2EFE6', fontFamily: 'Inter, sans-serif', fontSize: '.88rem' }}/>
-                <button style={{ background: '#FF6B00', color: '#0E1117', padding: '.95rem 1.6rem', borderRadius: '100px', border: 0, fontFamily: 'Inter Tight, sans-serif', fontWeight: 800, fontSize: '.88rem', textTransform: 'uppercase', letterSpacing: '0.04em', cursor: 'pointer' }}>Suscribirme</button>
+                <button style={{ background: '#FFCE00', color: '#0E1117', padding: '.95rem 1.6rem', borderRadius: '100px', border: 0, fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '.88rem', textTransform: 'uppercase', letterSpacing: '0.04em', cursor: 'pointer' }}>Suscribirme</button>
               </div>
             </div>
-            <div style={{ padding: '1.8rem 1.6rem', background: 'linear-gradient(135deg, rgba(255,90,31,0.14), rgba(242,193,43,0.08))', border: '1px solid rgba(255,90,31,0.40)', borderRadius: '14px' }}>
-              <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.6rem', letterSpacing: '.22em', color: '#FF6B00', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.6rem' }}>★ HABLA CON PRISCILA</div>
-              <div style={{ fontFamily: 'Inter Tight, sans-serif', fontSize: '1.3rem', fontWeight: 800, color: '#F2EFE6', marginBottom: '.4rem', lineHeight: 1.2 }}>Sebastián Martínez</div>
-              <div style={{ fontSize: '.78rem', color: 'rgba(244,236,220,0.62)', lineHeight: 1.5, marginBottom: '.9rem' }}>Founder · responde personalmente todos los briefs B2B en menos de 24h.</div>
+            <div style={{ padding: '1.8rem 1.6rem', background: 'linear-gradient(135deg, rgba(255,206,0,0.16), rgba(255,206,0,0.04))', border: '1px solid rgba(255,206,0,0.40)', borderRadius: '14px' }}>
+              <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.6rem', letterSpacing: '.22em', color: '#FFCE00', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.6rem' }}>★ CONTACTO COMERCIAL DIRECTO</div>
+              <div style={{ fontFamily: 'Inter Tight, sans-serif', fontSize: '1.3rem', fontWeight: 800, color: '#F2EFE6', marginBottom: '.4rem', lineHeight: 1.2 }}>Equipo Comercial ALO</div>
+              <div style={{ fontSize: '.78rem', color: 'rgba(244,236,220,0.62)', lineHeight: 1.5, marginBottom: '.9rem' }}>Cotización en menos de 4 horas hábiles · ejecutivo asignado por industria · respaldo técnico nacional.</div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '.4rem', fontSize: '.82rem' }}>
-                <a style={{ color: '#F2EFE6', textDecoration: 'none' }}>📞 +56 9 9999 9999</a>
-                <a style={{ color: '#F2EFE6', textDecoration: 'none' }}>✉ sebastian@alorental.cl</a>
-                <a style={{ color: '#FF6B00', fontWeight: 800, textDecoration: 'none' }}>💬 WhatsApp directo →</a>
+                <a style={{ color: '#F2EFE6', textDecoration: 'none' }}>📞 +56 2 2965 0300</a>
+                <a style={{ color: '#F2EFE6', textDecoration: 'none' }}>✉ ventas@alorental.cl</a>
+                <a style={{ color: '#FFCE00', fontWeight: 900, textDecoration: 'none' }}>💬 WhatsApp directo →</a>
               </div>
             </div>
           </div>
 
-          {/* 4-col nav rich */}
+          {/* 5-col nav · logo blanco real */}
           <div style={{ display: 'grid', gridTemplateColumns: '1.6fr 1fr 1fr 1fr 1fr', gap: '1.8rem', marginBottom: '2.2rem', position: 'relative', zIndex: 2 }}>
             <div>
-              <img src="assets/logo/alo-rental-logo-amarillo.webp" alt="ALO Rental" style={{ height: 60, width: 'auto', objectFit: 'contain', borderRadius: 10, background: 'rgba(255,255,255,0.95)', padding: 6, marginBottom: '1rem' }}/>
-              <p style={{ fontSize: '.82rem', color: 'rgba(244,236,220,0.62)', lineHeight: 1.65, marginBottom: '1rem' }}>20 años de oficio industrial. Representantes oficiales JLG y ALO Lift. 2.050+ equipos en flota · 9 sucursales en Chile · cobertura nacional completa. <b style={{ color: '#FF6B00' }}>Equipamos faenas que no pueden detenerse.</b></p>
+              <img src="assets/logo/alo-rental-logo-blanco.png" alt="ALO Rental" style={{ height: 64, width: 'auto', objectFit: 'contain', marginBottom: '1rem', filter: 'drop-shadow(0 4px 16px rgba(255,206,0,0.30))' }}/>
+              <p style={{ fontSize: '.82rem', color: 'rgba(244,236,220,0.62)', lineHeight: 1.65, marginBottom: '1rem' }}>20 años representantes oficiales JLG en Chile · marca propia ALO Lift · 2.050+ equipos en flota · 9 sucursales activas · cobertura nacional Iquique–Puerto Montt. <b style={{ color: '#FFCE00' }}>Equipamos faenas que no pueden detenerse.</b></p>
               <div style={{ display: 'flex', gap: '.5rem', flexWrap: 'wrap' }}>
-                {['IG', 'FB', 'IN', 'YT', 'PIN'].map(net => (
+                {['IG', 'FB', 'IN', 'YT', 'TT'].map(net => (
                   <div key={net} style={{ width: 38, height: 38, borderRadius: '50%', background: 'rgba(244,236,220,0.08)', border: '1px solid rgba(244,236,220,0.18)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'JetBrains Mono, monospace', fontSize: '.6rem', color: '#F2EFE6', fontWeight: 700, letterSpacing: '0.04em', cursor: 'pointer' }}>{net}</div>
                 ))}
               </div>
             </div>
             <div>
-              <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.58rem', letterSpacing: '.22em', color: '#FF6B00', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.9rem' }}>SERVICIOS</div>
+              <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.58rem', letterSpacing: '.22em', color: '#FFCE00', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.9rem' }}>EQUIPOS</div>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '.78rem', color: 'rgba(244,236,220,0.62)', lineHeight: 2 }}>
-                <li>Brazo Articulado</li>
-                <li>JLG transfer</li>
-                <li>Tijera Elevadora</li>
-                <li>Confección</li>
-                <li>Flota B2B</li>
-                <li>Activación</li>
-                <li>línea ESG</li>
+                <li>Brazos Articulados</li>
+                <li>Brazos Telescópicos</li>
+                <li>Plataformas Spider</li>
+                <li>Elevadores Tijera</li>
+                <li>Manipuladores</li>
+                <li>Camiones Alzahombres</li>
+                <li>ALO Lift · marca propia</li>
               </ul>
             </div>
             <div>
-              <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.58rem', letterSpacing: '.22em', color: '#FF6B00', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.9rem' }}>CASOS</div>
+              <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.58rem', letterSpacing: '.22em', color: '#FFCE00', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.9rem' }}>INDUSTRIAS</div>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '.78rem', color: 'rgba(244,236,220,0.62)', lineHeight: 2 }}>
-                <li>Codelco · División Andina</li>
-                <li>Activación festival</li>
-                <li>Inmobiliarias</li>
-                <li>Agencias retail</li>
-                <li>Onboarding 200 piezas</li>
-                <li>Reporte Q1 ESG</li>
+                <li>Minería</li>
+                <li>Construcción</li>
+                <li>Vialidad</li>
+                <li>Forestal</li>
+                <li>Energía</li>
+                <li>Retail · Mall</li>
+                <li>Puertos · Bodegaje</li>
               </ul>
             </div>
             <div>
-              <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.58rem', letterSpacing: '.22em', color: '#FF6B00', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.9rem' }}>RECURSOS</div>
+              <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.58rem', letterSpacing: '.22em', color: '#FFCE00', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.9rem' }}>SUCURSALES</div>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '.78rem', color: 'rgba(244,236,220,0.62)', lineHeight: 2 }}>
-                <li>Widget Try-On</li>
-                <li>Plantilla brief</li>
-                <li>Catálogo bases</li>
-                <li>Manual de marca</li>
-                <li>Blog editorial</li>
-                <li>Calculadora ESG</li>
+                <li>Iquique</li>
+                <li>Antofagasta</li>
+                <li>Copiapó</li>
+                <li>Coquimbo</li>
+                <li>Santiago (casa matriz)</li>
+                <li>Concepción</li>
+                <li>Puerto Montt</li>
               </ul>
             </div>
             <div>
-              <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.58rem', letterSpacing: '.22em', color: '#FF6B00', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.9rem' }}>TALLER</div>
+              <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.58rem', letterSpacing: '.22em', color: '#FFCE00', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.9rem' }}>CASA MATRIZ</div>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '.78rem', color: 'rgba(244,236,220,0.62)', lineHeight: 1.7 }}>
-                <li style={{ marginBottom: '.55rem' }}>📍 Av. Santa Rosa 1234<br/>Estación Central, Santiago</li>
-                <li style={{ marginBottom: '.55rem' }}>🕒 Lun-Vie · 09:00 - 18:30<br/>Sáb · 09:00 - 13:00</li>
-                <li style={{ marginBottom: '.55rem' }}>📞 +56 9 9999 9999</li>
-                <li style={{ color: '#FF6B00', fontWeight: 700, cursor: 'pointer' }}>VER MAPA →</li>
+                <li style={{ marginBottom: '.55rem' }}>📍 Camino a Melipilla · Maipú, Santiago</li>
+                <li style={{ marginBottom: '.55rem' }}>🕒 Lun-Vie · 08:30 - 18:00<br/>Sáb · 09:00 - 13:00</li>
+                <li style={{ marginBottom: '.55rem' }}>📞 +56 2 2965 0300</li>
+                <li style={{ color: '#FFCE00', fontWeight: 800, cursor: 'pointer' }}>VER 9 SUCURSALES →</li>
               </ul>
             </div>
           </div>
 
-          {/* badges · certificaciones */}
+          {/* badges · certificaciones reales rubro elevación */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', padding: '1.4rem 1.6rem', background: 'rgba(244,236,220,0.05)', border: '1px solid rgba(244,236,220,0.12)', borderRadius: '14px', marginBottom: '1.8rem', position: 'relative', zIndex: 2 }}>
             <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.65rem', letterSpacing: '.20em', color: '#F2EFE6', textTransform: 'uppercase', fontWeight: 700 }}>★ CERTIFICACIONES & PARTNERS</div>
             <div style={{ display: 'flex', gap: '1.4rem', flexWrap: 'wrap', alignItems: 'center' }}>
-              {['EPSON Certified', 'OEKO-TEX 100', 'ISO 9001', 'Sello Eco CL', 'Meta Business Partner', 'Google Premier'].map(b => (
+              {['JLG Authorized Dealer', 'ALO Group LATAM', 'ANSI A92.20', 'DS 594 · Chile', 'ISO 9001', 'Access 50 · KHL'].map(b => (
                 <span key={b} style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.64rem', letterSpacing: '.10em', color: 'rgba(244,236,220,0.65)', textTransform: 'uppercase' }}>{b}</span>
               ))}
             </div>
           </div>
 
-          {/* bottom bar */}
-          <div style={{ paddingTop: '1.4rem', borderTop: '1px solid rgba(244,236,220,0.10)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '.8rem', fontSize: '.72rem', color: 'rgba(244,236,220,0.55)', position: 'relative', zIndex: 2 }}>
-            <div>© 2026 ALO Rental · Sebastián Martínez SpA · RUT 76.XXX.XXX-X · Todos los derechos reservados</div>
-            <div style={{ display: 'flex', gap: '1.3rem' }}>
-              <span>Términos</span>
-              <span>Privacidad</span>
-              <span>Cookies</span>
-              <span>Devoluciones</span>
-              <span>Trabaja con nosotros</span>
+          {/* bottom bar · botones de subfooter ahora con estilo legible */}
+          <div style={{ paddingTop: '1.4rem', borderTop: '1px solid rgba(244,236,220,0.10)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', fontSize: '.72rem', color: 'rgba(244,236,220,0.55)', position: 'relative', zIndex: 2 }}>
+            <div>© 2026 ALO Rental · ALO Group Chile SpA · 9 sucursales en Chile · Todos los derechos reservados</div>
+            <div style={{ display: 'flex', gap: '.45rem', flexWrap: 'wrap' }}>
+              {['Términos', 'Privacidad', 'Cookies', 'Aviso legal', 'Trabaja con nosotros'].map((t, i) => (
+                <a key={i} style={{ padding: '.45rem .85rem', border: '1px solid rgba(255,206,0,0.30)', borderRadius: '999px', fontFamily: 'JetBrains Mono, monospace', fontSize: '.62rem', letterSpacing: '.08em', color: '#FFCE00', fontWeight: 700, textTransform: 'uppercase', cursor: 'pointer', transition: 'all .2s', background: 'rgba(255,206,0,0.04)' }}>{t}</a>
+              ))}
             </div>
           </div>
         </footer>
@@ -10362,7 +10357,7 @@ function LandFlotaSection() {
           </div>
           <div className="land-mock-hero eco-tint">
             <div className="nav-row">
-              <div className="brand">LA ESTAMPA<span style={{ color: 'var(--accent2)' }}>·</span>MERCH</div>
+              <div className="brand">ALO<span style={{ color: 'var(--accent2)' }}>·</span>FLOTA</div>
               <div>DESCARGAR PDF CAPACIDADES →</div>
             </div>
             <div className="kicker">— KITS · UNIFORMES · ACTIVACIONES · ESG</div>
@@ -10512,13 +10507,10 @@ function InvestSection() {
    S.0 · SHOWCASE · TODAS LAS GRÁFICAS POR ESTILO
    ======================================================== */
 function ShowcaseSection() {
-  const RRSS = [
-    { src: 'assets/rrss/disponible-11.png',       ratio: '1:1',  tag: 'IG POST',     title: 'Disponible mañana en tu obra',    pilar: 'DISPONIBILIDAD' },
-    { src: 'assets/rrss/codelco-916.png',         ratio: '9:16', tag: 'IG STORY',    title: 'Caso Codelco · 0 accidentes',     pilar: 'CASO' },
-    { src: 'assets/rrss/ficha-tijera-11.png',     ratio: '1:1',  tag: 'IG POST',     title: 'Tijera eléctrica 5.7m · stock',   pilar: 'CATÁLOGO' },
-    { src: 'assets/rrss/mapa-cobertura-916.png',  ratio: '9:16', tag: 'IG STORY',    title: 'De Arica a Punta Arenas',         pilar: 'COBERTURA' },
-    { src: 'assets/rrss/oficial-jlg-11.png',      ratio: '1:1',  tag: 'IG POST',     title: 'Oficial JLG · el origen importa', pilar: 'AUTORIDAD' },
-    { src: 'assets/rrss/latam-169.png',           ratio: '16:9', tag: 'LINKEDIN',    title: 'ALO Group · Access 50 KHL',       pilar: 'LATAM' }
+  const HF_POSTERS = [
+    { src: 'assets/showcase/grafica-nueva-flota-2026.png', tag: 'POSTER CAMPAÑA', title: 'NUEVA FLOTA 2026', caption: 'Mockup phone + flota retroexcavadoras + identidad ALO. Pieza editorial para anuncio de llegada de flota nueva.' },
+    { src: 'assets/showcase/grafica-casco-alo.png',         tag: 'BRAND ASSET',     title: 'CASCO ALO RENTAL · ICÓNICO', caption: 'Casco ALO RENTAL naranja sobre obra real. Hero shot reutilizable en RRSS, web, brochure y prensa.' },
+    { src: 'assets/showcase/grafica-5-senales-alzahombre.png', tag: 'EDITORIAL B2B', title: '5 SEÑALES · ALZAHOMBRE', caption: 'Pieza educativa: 5 señales que tu obra necesita un alzahombre. Lead-gen B2B para LinkedIn y blog.' }
   ];
   const FLYERS = [
     { src: 'assets/showcase/alo-flyer-1.png', tag: 'STORY 9:16', title: 'Equipos para cada desafío', caption: 'Story IG + Facebook · 4 categorías + 5 garantías + WhatsApp.' },
@@ -10534,33 +10526,33 @@ function ShowcaseSection() {
     { src: 'assets/sucursales/coquimbo.webp',    name: 'Coquimbo', region: 'IV Región · Centro' },
     { src: 'assets/sucursales/puerto-montt.webp', name: 'Puerto Montt', region: 'X Región · Sur' }
   ];
-  const totalPieces = RRSS.length + FLYERS.length + VIDEOS.length + SUCS.length + 1;
+  const totalPieces = HF_POSTERS.length + FLYERS.length + VIDEOS.length + SUCS.length;
 
   return (
     <section>
       <SectionHead num="S.0" title="Showcase · <em>todo el material producido</em>"
-        desc={`${totalPieces} piezas reales generadas para ALO Rental · gráficas RRSS con texto incrustado · videos cinematográficos · flyers production-ready · fotos reales de sucursales · referencia visual del sitio actual. Todo descargable y editable para tu equipo interno.`}/>
+        desc={`${totalPieces} piezas reales producidas para ALO Rental · 3 posters editoriales de campaña · 2 flyers production-ready · 3 videos cinematográficos · 3 fotos de sucursales reales. Todo descargable, editable y propiedad de ALO Rental tras la entrega.`}/>
 
       <div style={{ background: 'linear-gradient(135deg, #FFCE00 0%, #FFB800 100%)', borderRadius: '20px', padding: '2rem 2.4rem', marginBottom: '2rem', color: '#0E1117' }}>
-        <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.65rem', letterSpacing: '.24em', fontWeight: 800, marginBottom: '.6rem', textTransform: 'uppercase' }}>★ TOTAL · {totalPieces} PIEZAS · CERO STOCK PHOTO</div>
+        <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.65rem', letterSpacing: '.24em', fontWeight: 800, marginBottom: '.6rem', textTransform: 'uppercase' }}>★ TOTAL · {totalPieces} PIEZAS PRODUCIDAS</div>
         <h2 style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '2.2rem', letterSpacing: '-0.02em', lineHeight: 1.05, marginBottom: '.5rem' }}>Cada pieza producida con la marca ALO Rental real</h2>
-        <p style={{ fontSize: '.95rem', lineHeight: 1.55 }}>Imágenes generadas con Higgsfield (Nano Banana Pro · 2K) · texto incrustado en español neutro · listas para publicar sin pasar por diseño. Capacidad mensual: 30-40 piezas con la misma identidad visual.</p>
+        <p style={{ fontSize: '.95rem', lineHeight: 1.55 }}>Posters editoriales · flyers production-ready · videos cinematográficos · fotos reales en sucursales. Listas para publicar sin pasar por una segunda agencia. Capacidad mensual: 30-40 piezas con la misma identidad visual.</p>
       </div>
 
-      {/* RRSS · 6 piezas con texto */}
+      {/* HF POSTERS · 3 piezas editoriales destacadas */}
       <div style={{ marginBottom: '2.4rem' }}>
-        <h3 style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '1.6rem', color: 'var(--ink)', marginBottom: '.4rem', letterSpacing: '-0.01em' }}>RRSS · 6 piezas con texto incrustado</h3>
-        <p style={{ fontSize: '.86rem', color: 'var(--ink-soft)', marginBottom: '1rem' }}>6 pilares de contenido cubiertos: disponibilidad · caso · catálogo · cobertura · autoridad · LATAM. Click para descargar.</p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '.9rem' }}>
-          {RRSS.map((p, i) => (
-            <div key={i} style={{ borderRadius: '12px', overflow: 'hidden', border: '1px solid rgba(255,206,0,0.30)', background: '#1A1F28' }}>
-              <div style={{ aspectRatio: p.ratio === '9:16' ? '9/16' : p.ratio === '16:9' ? '16/9' : '1/1', backgroundImage: `url(${p.src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}/>
-              <div style={{ padding: '.8rem 1rem' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '.3rem' }}>
-                  <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.55rem', letterSpacing: '.16em', color: '#FFCE00', fontWeight: 700, textTransform: 'uppercase' }}>{p.tag} · {p.ratio}</span>
-                  <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.5rem', background: 'rgba(255,206,0,0.15)', color: '#FFCE00', padding: '.15rem .4rem', borderRadius: '4px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '.1em' }}>{p.pilar}</span>
-                </div>
-                <div style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 700, fontSize: '.86rem', color: 'var(--ink)', lineHeight: 1.25 }}>{p.title}</div>
+        <h3 style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '1.6rem', color: 'var(--ink)', marginBottom: '.4rem', letterSpacing: '-0.01em' }}>Posters editoriales · 3 campañas estrella</h3>
+        <p style={{ fontSize: '.86rem', color: 'var(--ink-soft)', marginBottom: '1rem' }}>Tres piezas hero para campañas anuales: nueva flota 2026, brand asset del casco icónico ALO y editorial lead-gen B2B "5 señales". Reutilizables en web, paid Meta + LinkedIn, prensa, vallas y brochure.</p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' }}>
+          {HF_POSTERS.map((p, i) => (
+            <div key={i} style={{ borderRadius: '14px', overflow: 'hidden', border: '2px solid #FFCE00', background: '#1A1F28', boxShadow: '0 16px 40px -16px rgba(255,206,0,0.30)' }}>
+              <div style={{ aspectRatio: '4/5', backgroundImage: `url(${p.src})`, backgroundSize: 'cover', backgroundPosition: 'center', background: '#0E1117' }}>
+                <img src={p.src} alt={p.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}/>
+              </div>
+              <div style={{ padding: '1rem 1.2rem' }}>
+                <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.58rem', letterSpacing: '.16em', color: '#FFCE00', textTransform: 'uppercase', fontWeight: 800, marginBottom: '.3rem' }}>{p.tag}</div>
+                <div style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '1.05rem', color: 'var(--ink)', letterSpacing: '-0.01em', marginBottom: '.4rem' }}>{p.title}</div>
+                <p style={{ fontSize: '.78rem', color: 'var(--ink-soft)', lineHeight: 1.5 }}>{p.caption}</p>
               </div>
             </div>
           ))}
@@ -10622,18 +10614,9 @@ function ShowcaseSection() {
         </div>
       </div>
 
-      {/* REFERENCIA · 8 áreas industriales del sitio actual */}
-      <div style={{ marginBottom: '2rem' }}>
-        <h3 style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '1.6rem', color: 'var(--ink)', marginBottom: '.4rem', letterSpacing: '-0.01em' }}>Referencia visual · 8 áreas industriales</h3>
-        <p style={{ fontSize: '.86rem', color: 'var(--ink-soft)', marginBottom: '1rem' }}>Captura del sitio actual alorental.cl · paleta amarilla signature mantenida como heredada. Misma sección rediseñada en W.5 Tailored V2.</p>
-        <div style={{ borderRadius: '14px', overflow: 'hidden', border: '1px solid rgba(255,206,0,0.30)' }}>
-          <img src="assets/industrias/8-areas-industriales-real.png" alt="8 áreas industriales ALO Rental" style={{ display: 'block', width: '100%', height: 'auto' }}/>
-        </div>
-      </div>
-
       <div style={{ background: 'rgba(255,206,0,0.10)', border: '1px solid rgba(255,206,0,0.30)', borderRadius: '14px', padding: '1.4rem 1.6rem', marginTop: '2rem' }}>
         <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.6rem', letterSpacing: '.2em', color: '#FFCE00', fontWeight: 800, marginBottom: '.4rem', textTransform: 'uppercase' }}>★ TODO INCLUIDO EN LA PROPUESTA</div>
-        <p style={{ fontSize: '.92rem', color: 'var(--ink)', lineHeight: 1.6 }}><b>{totalPieces} piezas listas + capacidad de producir 30-40 más al mes con la misma identidad.</b> Cada activo es propiedad de ALO Rental tras la entrega · sin licencias recurrentes · editable en Figma/Photoshop · escalable a 4K cuando se necesite imprenta. La propuesta incluye además 4 reels editoriales que se producen en el M2 con foto/video industrial real (no IA) en sucursal Quilicura.</p>
+        <p style={{ fontSize: '.92rem', color: 'var(--ink)', lineHeight: 1.6 }}><b>{totalPieces} piezas listas + capacidad de producir 30-40 más al mes con la misma identidad.</b> Cada activo es propiedad de ALO Rental tras la entrega · sin licencias recurrentes · editable en Figma/Photoshop · escalable a 4K cuando se necesite imprenta. La propuesta incluye además 4 reels editoriales que se producen en el M2 con foto/video industrial real en sucursales reales de la red ALO Rental.</p>
       </div>
     </section>
   );
@@ -11205,6 +11188,56 @@ function LandRecomendadorIASection() {
 /* ====================================================================
    W.5 · TAILORED V2 · paleta REAL alorental.cl (amarillo + negro)
    ==================================================================== */
+function V2AnimatedStats() {
+  const ref = React.useRef(null);
+  const [vals, setVals] = React.useState([0, 0, 0]);
+  const targets = [20, 2050, 21000];
+  const labels = ['Años en el mercado', 'Equipos en flota total ALO Group', 'Contratos atendidos histórico'];
+  const suffix = ['', '+', '+'];
+  const prefix = ['', '', ''];
+
+  React.useEffect(() => {
+    if (!ref.current) return;
+    let raf;
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const start = performance.now();
+          const duration = 1600;
+          const step = (now) => {
+            const t = Math.min(1, (now - start) / duration);
+            const eased = 1 - Math.pow(1 - t, 3);
+            setVals(targets.map(target => Math.round(target * eased)));
+            if (t < 1) raf = requestAnimationFrame(step);
+          };
+          raf = requestAnimationFrame(step);
+          io.disconnect();
+        }
+      });
+    }, { threshold: 0.3 });
+    io.observe(ref.current);
+    return () => { io.disconnect(); if (raf) cancelAnimationFrame(raf); };
+  }, []);
+
+  const fmt = (n) => n.toLocaleString('es-CL');
+
+  return (
+    <div ref={ref} style={{ background: '#0E1117', padding: '2.5rem 2.5rem', borderTop: '3px solid #FFCE00', borderBottom: '3px solid #FFCE00', position: 'relative', overflow: 'hidden' }}>
+      <div style={{ position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)', width: '60%', height: 2, background: 'linear-gradient(90deg, transparent, #FFCE00, transparent)', filter: 'blur(2px)' }}/>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.4rem', position: 'relative', zIndex: 2 }}>
+        {targets.map((_, i) => (
+          <div key={i} style={{ textAlign: 'center', padding: '.6rem .4rem', borderRight: i < 2 ? '1px solid rgba(255,206,0,0.20)' : 'none' }}>
+            <div style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '3.4rem', color: '#FFCE00', lineHeight: 1, letterSpacing: '-0.03em', textShadow: '0 0 30px rgba(255,206,0,0.45)' }}>
+              {prefix[i]}{fmt(vals[i])}{suffix[i]}
+            </div>
+            <div style={{ marginTop: '.4rem', fontFamily: 'JetBrains Mono, monospace', fontSize: '.7rem', letterSpacing: '.14em', color: 'rgba(255,255,255,0.7)', fontWeight: 700, textTransform: 'uppercase' }}>{labels[i]}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function WebTailoredV2Section() {
   return (
     <section>
@@ -11278,46 +11311,51 @@ function WebTailoredV2Section() {
           </div>
         </div>
 
-        {/* STATS BAR · negro como screenshot real */}
-        <div style={{ background: '#0E1117', color: '#FFFFFF', padding: '2rem 2.5rem', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem', borderTop: '4px solid #FFCE00' }}>
-          {[
-            { v: '20', l: 'Años de Experiencia' },
-            { v: '2.050+', l: 'Equipos en Flota' },
-            { v: '+21.000', l: 'Contratos Cumplidos' }
-          ].map((s, i) => (
-            <div key={i} style={{ textAlign: 'center' }}>
-              <div style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '3rem', color: '#FFCE00', letterSpacing: '-0.02em', lineHeight: 1 }}>{s.v}</div>
-              <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '.75rem', color: '#FFFFFF', opacity: 0.7, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.08em', marginTop: '.4rem' }}>{s.l}</div>
-            </div>
-          ))}
-        </div>
+        {/* STATS BAR · contadores ANIMADOS · count-up al entrar a viewport */}
+        <V2AnimatedStats/>
 
-        {/* 8 INDUSTRIAS · amarillo como real */}
-        <div style={{ background: '#FFCE00', padding: '3.5rem 2.5rem' }}>
-          <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-            <h2 style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '2.6rem', color: '#0E1117', lineHeight: 1.05, letterSpacing: '-0.02em' }}>Estamos en cada una de las <em style={{ fontStyle: 'normal' }}>áreas industriales del país</em></h2>
+        {/* 8 INDUSTRIAS · paleta amarilla con cards mejoradas (icono + degrade dinámico + 3D tilt) */}
+        <div style={{ background: '#FFCE00', padding: '4rem 2.5rem', position: 'relative', overflow: 'hidden' }}>
+          <div style={{ position: 'absolute', top: '-80px', right: '-80px', width: 320, height: 320, borderRadius: '50%', background: 'radial-gradient(circle, rgba(14,17,23,0.10), transparent 70%)', pointerEvents: 'none' }}/>
+          <div style={{ textAlign: 'center', marginBottom: '2.4rem', position: 'relative', zIndex: 2 }}>
+            <span style={{ display: 'inline-block', background: '#0E1117', color: '#FFCE00', padding: '.4rem .9rem', borderRadius: '999px', fontFamily: 'Inter, sans-serif', fontWeight: 800, fontSize: '.7rem', letterSpacing: '.08em', textTransform: 'uppercase', marginBottom: '.8rem' }}>★ COBERTURA NACIONAL TOTAL</span>
+            <h2 style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '2.8rem', color: '#0E1117', lineHeight: 1.02, letterSpacing: '-0.02em' }}>Estamos en cada una de las <em style={{ fontStyle: 'normal', color: '#FF6B00' }}>áreas industriales del país</em></h2>
           </div>
-          <div className="v2-3d-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '.7rem', perspective: '1400px' }}>
-            {['Minería', 'Retail', 'Forestal', 'Construcción', 'Vialidad', 'Energía', 'Puertos', 'Bodegaje'].map((ind, i) => (
-              <div key={i} className="v2-3d-card" style={{ aspectRatio: '4/3', borderRadius: '12px', background: '#0E1117', position: 'relative', overflow: 'hidden', transformStyle: 'preserve-3d', transition: 'transform .45s cubic-bezier(.2,.7,.2,1), box-shadow .45s, filter .45s', cursor: 'pointer', willChange: 'transform' }}>
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(255,107,0,0.30), rgba(14,17,23,0.78)), url(assets/img/hero-faena-jlg.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}/>
-                <h4 style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 2, fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '1.4rem', color: '#FFFFFF', letterSpacing: '-0.01em', transform: 'translateZ(40px)' }}>{ind}</h4>
+          <div className="v2-3d-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem', perspective: '1400px', position: 'relative', zIndex: 2 }}>
+            {[
+              { name: 'Minería', ic: '⛏', sub: 'Codelco · Anglo · Antofagasta', img: 'assets/img/hero-faena-jlg.png' },
+              { name: 'Retail', ic: '🛒', sub: 'Mall Plaza · Falabella · Líder', img: 'assets/showcase/grafica-casco-alo.png' },
+              { name: 'Forestal', ic: '🌲', sub: 'Arauco · CMPC · Masisa', img: 'assets/sucursales/puerto-montt.webp' },
+              { name: 'Construcción', ic: '🏗', sub: 'Obras civiles · fachadas', img: 'assets/showcase/grafica-nueva-flota-2026.png' },
+              { name: 'Vialidad', ic: '🚧', sub: 'Autopistas · señalética', img: 'assets/sucursales/coquimbo.webp' },
+              { name: 'Energía', ic: '⚡', sub: 'Enel · ENGIE · subestaciones', img: 'assets/rrss/latam-169.png' },
+              { name: 'Puertos', ic: '🚢', sub: 'San Antonio · Valparaíso', img: 'assets/sucursales/iquique.webp' },
+              { name: 'Bodegaje', ic: '📦', sub: 'CD logístico · 3PL', img: 'assets/img/catalogo-equipos.png' }
+            ].map((ind, i) => (
+              <div key={i} className="v2-3d-card" style={{ aspectRatio: '4/5', borderRadius: '14px', background: '#0E1117', position: 'relative', overflow: 'hidden', transformStyle: 'preserve-3d', transition: 'transform .45s cubic-bezier(.2,.7,.2,1), box-shadow .45s, filter .45s', cursor: 'pointer', willChange: 'transform', boxShadow: '0 14px 40px -16px rgba(14,17,23,0.40)' }}>
+                <div style={{ position: 'absolute', inset: 0, backgroundImage: `url(${ind.img})`, backgroundSize: 'cover', backgroundPosition: 'center', filter: 'saturate(.85)' }}/>
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(14,17,23,0.10) 0%, rgba(14,17,23,0.30) 40%, rgba(14,17,23,0.92) 100%)' }}/>
+                <div style={{ position: 'absolute', top: '1rem', left: '1rem', fontSize: '1.8rem', filter: 'drop-shadow(0 4px 10px rgba(0,0,0,0.5))', zIndex: 2 }}>{ind.ic}</div>
+                <div style={{ position: 'absolute', bottom: '1rem', left: '1.1rem', right: '1.1rem', zIndex: 2, transform: 'translateZ(50px)' }}>
+                  <h4 style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '1.5rem', color: '#FFFFFF', letterSpacing: '-0.01em', marginBottom: '.25rem', lineHeight: 1 }}>{ind.name}</h4>
+                  <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.6rem', letterSpacing: '.12em', color: '#FFCE00', fontWeight: 700, textTransform: 'uppercase' }}>{ind.sub}</div>
+                </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* VIDEO HERO REAL · ALO Lift en faena · efecto cinematográfico inline */}
+        {/* VIDEO REAL · ALO Lift en faena · publicidad alta tecnología */}
         <div style={{ background: '#0E1117', padding: '3.5rem 2.5rem', position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', top: '20%', right: '5%', width: 300, height: 300, borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,206,0,0.25), transparent 70%)', pointerEvents: 'none', filter: 'blur(40px)' }}/>
           <div style={{ position: 'relative', zIndex: 2, display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '2.5rem', alignItems: 'center' }}>
             <div>
-              <span style={{ display: 'inline-block', background: '#FFCE00', color: '#0E1117', padding: '.4rem .9rem', borderRadius: '999px', fontFamily: 'Inter, sans-serif', fontWeight: 800, fontSize: '.7rem', letterSpacing: '.08em', textTransform: 'uppercase', marginBottom: '1rem' }}>🎬 VIDEO HERO · LOOP CINEMATOGRÁFICO</span>
-              <h3 style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '2.6rem', color: '#FFFFFF', lineHeight: 1.05, letterSpacing: '-0.02em', marginBottom: '.8rem' }}>Cada equipo · <em style={{ fontStyle: 'normal', color: '#FFCE00' }}>fotografiado en faena real.</em></h3>
-              <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.78)', lineHeight: 1.55, marginBottom: '1.2rem' }}>Loop de 12 segundos · brazos articulados JLG operando en faena minera real. Sin retoque, sin render. Lo que arriendas es lo que ves antes de cotizar.</p>
+              <span style={{ display: 'inline-block', background: '#FFCE00', color: '#0E1117', padding: '.4rem .9rem', borderRadius: '999px', fontFamily: 'Inter, sans-serif', fontWeight: 800, fontSize: '.7rem', letterSpacing: '.08em', textTransform: 'uppercase', marginBottom: '1rem' }}>★ TECNOLOGÍA DE PUNTA · LÍDER LATAM</span>
+              <h3 style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '2.6rem', color: '#FFFFFF', lineHeight: 1.05, letterSpacing: '-0.02em', marginBottom: '.8rem' }}>La flota más <em style={{ fontStyle: 'normal', color: '#FFCE00' }}>avanzada del mercado.</em></h3>
+              <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.6, marginBottom: '1.2rem' }}>Equipos JLG y ALO Lift de última generación · representantes oficiales en Chile · mantención preventiva certificada · operadores DS 594. Trabajamos con la maquinaria que la industria líder usa hoy: misma tecnología que llega a Codelco, Anglo American, Arauco y Enel.</p>
               <div style={{ display: 'flex', gap: '.6rem', flexWrap: 'wrap' }}>
-                <span style={{ background: 'rgba(255,206,0,0.10)', border: '1px solid rgba(255,206,0,0.35)', color: '#FFCE00', padding: '.4rem .8rem', borderRadius: '999px', fontFamily: 'JetBrains Mono, monospace', fontSize: '.7rem', letterSpacing: '.1em', fontWeight: 700, textTransform: 'uppercase' }}>1080p · 12s</span>
-                <span style={{ background: 'rgba(255,107,0,0.10)', border: '1px solid rgba(255,107,0,0.35)', color: '#FF6B00', padding: '.4rem .8rem', borderRadius: '999px', fontFamily: 'JetBrains Mono, monospace', fontSize: '.7rem', letterSpacing: '.1em', fontWeight: 700, textTransform: 'uppercase' }}>AUTOPLAY MUTED</span>
+                <span style={{ background: 'rgba(255,206,0,0.12)', border: '1px solid rgba(255,206,0,0.40)', color: '#FFCE00', padding: '.5rem .9rem', borderRadius: '999px', fontFamily: 'JetBrains Mono, monospace', fontSize: '.7rem', letterSpacing: '.1em', fontWeight: 800, textTransform: 'uppercase' }}>JLG · REPRESENTANTE OFICIAL</span>
+                <span style={{ background: 'rgba(255,107,0,0.12)', border: '1px solid rgba(255,107,0,0.40)', color: '#FF6B00', padding: '.5rem .9rem', borderRadius: '999px', fontFamily: 'JetBrains Mono, monospace', fontSize: '.7rem', letterSpacing: '.1em', fontWeight: 800, textTransform: 'uppercase' }}>ALO LIFT · MARCA PROPIA</span>
               </div>
             </div>
             <div style={{ borderRadius: '14px', overflow: 'hidden', border: '2px solid rgba(255,206,0,0.35)', boxShadow: '0 30px 80px -20px rgba(255,206,0,0.30)', transform: 'perspective(1400px) rotateY(-3deg) rotateX(2deg)' }}>
@@ -11356,24 +11394,62 @@ function WebTailoredV2Section() {
           </div>
         </div>
 
-        {/* 5 CATEGORÍAS DE EQUIPOS · negro */}
-        <div style={{ background: '#FFFFFF', padding: '3.5rem 2.5rem' }}>
-          <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-            <span style={{ fontFamily: 'Inter, sans-serif', fontWeight: 800, fontSize: '.72rem', letterSpacing: '.18em', color: '#FF6B00', textTransform: 'uppercase' }}>FLOTA ALO RENTAL</span>
-            <h2 style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '2.4rem', color: '#0E1117', lineHeight: 1.1, letterSpacing: '-0.02em', marginTop: '.4rem' }}>5 categorías · cada equipo en su faena</h2>
+        {/* 5 CATEGORÍAS DE EQUIPOS · diseño hero + 4 cols · vertical posters */}
+        <div style={{ background: '#FFFFFF', padding: '4rem 2.5rem', position: 'relative' }}>
+          <style>{`
+            .v2-cat-poster { position: relative; overflow: hidden; border-radius: 16px; cursor: pointer; transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s; }
+            .v2-cat-poster:hover { transform: translateY(-6px); box-shadow: 0 30px 60px -20px rgba(14,17,23,0.40); }
+            .v2-cat-poster:hover .v2-cat-bg { transform: scale(1.08); }
+            .v2-cat-bg { position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+            .v2-cat-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(14,17,23,0.05) 0%, rgba(14,17,23,0.35) 45%, rgba(14,17,23,0.92) 100%); }
+            .v2-cat-cta { opacity: 0; transform: translateY(8px); transition: opacity .3s, transform .3s; }
+            .v2-cat-poster:hover .v2-cat-cta { opacity: 1; transform: translateY(0); }
+          `}</style>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', alignItems: 'end', gap: '2rem', marginBottom: '2.2rem' }}>
+            <div>
+              <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.7rem', letterSpacing: '.18em', color: '#FF6B00', fontWeight: 800, textTransform: 'uppercase' }}>★ FLOTA ALO RENTAL · 2.050+ EQUIPOS</span>
+              <h2 style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '3rem', color: '#0E1117', lineHeight: 1.0, letterSpacing: '-0.03em', marginTop: '.5rem' }}>5 categorías · <em style={{ fontStyle: 'normal', color: '#FF6B00' }}>cada equipo en su faena.</em></h2>
+              <p style={{ marginTop: '.7rem', fontSize: '.95rem', color: '#555', maxWidth: 620, lineHeight: 1.5 }}>Brazos, Spider, Tijeras, Manipuladores y Camiones Alzahombres. JLG representante oficial + marca propia ALO Lift. Asesoramos qué equipo te conviene según altura, carga y ambiente.</p>
+            </div>
+            <a href="#cotizador" style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '.85rem', color: '#0E1117', textDecoration: 'underline', textUnderlineOffset: '4px', textDecorationColor: '#FFCE00', textDecorationThickness: '3px', whiteSpace: 'nowrap' }}>Ver catálogo completo →</a>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '1rem' }}>
+
+          {/* layout asimétrico: 1 grande izquierda + 4 chicos derecha en 2x2 */}
+          <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr 1fr', gap: '1rem' }}>
+            {/* card grande · Brazos */}
+            <div className="v2-cat-poster" style={{ gridRow: 'span 2', aspectRatio: '3/5', background: '#0E1117' }}>
+              <div className="v2-cat-bg" style={{ backgroundImage: 'url(assets/img/hero-faena-jlg.png)' }}/>
+              <div className="v2-cat-overlay"/>
+              <div style={{ position: 'absolute', top: '1.2rem', left: '1.2rem', display: 'flex', gap: '.4rem', zIndex: 2 }}>
+                <span style={{ background: '#DB2231', color: '#fff', padding: '.32rem .65rem', borderRadius: '4px', fontFamily: 'JetBrains Mono, monospace', fontSize: '.62rem', letterSpacing: '.1em', fontWeight: 800, textTransform: 'uppercase' }}>★ MÁS PEDIDO</span>
+                <span style={{ background: 'rgba(255,206,0,0.95)', color: '#0E1117', padding: '.32rem .65rem', borderRadius: '4px', fontFamily: 'JetBrains Mono, monospace', fontSize: '.62rem', letterSpacing: '.1em', fontWeight: 800, textTransform: 'uppercase' }}>JLG</span>
+              </div>
+              <div style={{ position: 'absolute', bottom: '1.3rem', left: '1.4rem', right: '1.4rem', zIndex: 2 }}>
+                <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.65rem', letterSpacing: '.16em', color: '#FFCE00', fontWeight: 800, textTransform: 'uppercase', marginBottom: '.4rem' }}>01 · ELEVACIÓN</div>
+                <h3 style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '2rem', color: '#FFFFFF', lineHeight: 0.95, letterSpacing: '-0.02em', marginBottom: '.5rem' }}>Brazos Articulados<br/>y Telescópicos</h3>
+                <p style={{ fontSize: '.82rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.4, marginBottom: '.7rem', maxWidth: 320 }}>Acceso a altura con desplazamiento horizontal. Faena minera, fachadas, mantención industrial.</p>
+                <div style={{ display: 'flex', gap: '.5rem', alignItems: 'center' }}>
+                  <span style={{ background: 'rgba(255,206,0,0.15)', border: '1px solid rgba(255,206,0,0.4)', color: '#FFCE00', padding: '.4rem .7rem', borderRadius: '999px', fontFamily: 'JetBrains Mono, monospace', fontSize: '.65rem', letterSpacing: '.06em', fontWeight: 700 }}>12-67m altura</span>
+                  <div className="v2-cat-cta" style={{ color: '#FFCE00', fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '.85rem' }}>Cotizar →</div>
+                </div>
+              </div>
+            </div>
+            {/* 4 cards chicas */}
             {[
-              { ic: '🏗', n: 'Brazos Articulados y Telescópicos', r: '12-67m' },
-              { ic: '🕷', n: 'Spider', r: '14-50m' },
-              { ic: '🪜', n: 'Elevadores Tijera', r: '6-23m' },
-              { ic: '🚜', n: 'Manipuladores Telescópicos', r: 'hasta 17m + 5t' },
-              { ic: '🚛', n: 'Camiones Alzahombres', r: 'sobre chasis' }
+              { ix: '02', cat: 'INTERIORES', n: 'Spider', desc: 'Plataformas oruga compactas · acceso restringido.', range: '14-50m altura', img: 'assets/sucursales/iquique.webp', tag: 'PATIOS' },
+              { ix: '03', cat: 'TIJERA', n: 'Elevadores Tijera', desc: 'Plataformas elevadoras estables · altura controlada.', range: '6-23m altura', img: 'assets/sucursales/coquimbo.webp', tag: 'BODEGA' },
+              { ix: '04', cat: 'CARGA', n: 'Manipuladores Telescópicos', desc: 'Brazo de carga rotatorio · faena pesada.', range: 'hasta 17m · 5t', img: 'assets/sucursales/puerto-montt.webp', tag: 'OBRA' },
+              { ix: '05', cat: 'MOVILIDAD', n: 'Camiones Alzahombres', desc: 'Plataformas sobre camión · vialidad y rescate.', range: 'sobre chasis', img: 'assets/showcase/grafica-nueva-flota-2026.png', tag: 'VIAL' }
             ].map((c, i) => (
-              <div key={i} style={{ padding: '1.6rem 1.2rem', background: '#FAF8F2', borderRadius: '14px', border: '1px solid #E8E5DD', textAlign: 'center', transition: 'all .2s', cursor: 'pointer' }}>
-                <div style={{ fontSize: '2.4rem', marginBottom: '.5rem' }}>{c.ic}</div>
-                <h5 style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 800, fontSize: '.85rem', color: '#0E1117', letterSpacing: '-0.01em', lineHeight: 1.2, marginBottom: '.4rem', minHeight: '2.4em' }}>{c.n}</h5>
-                <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.65rem', letterSpacing: '.06em', color: '#FF6B00', textTransform: 'uppercase', fontWeight: 700 }}>{c.r}</div>
+              <div key={i} className="v2-cat-poster" style={{ aspectRatio: '4/3', background: '#0E1117' }}>
+                <div className="v2-cat-bg" style={{ backgroundImage: `url(${c.img})` }}/>
+                <div className="v2-cat-overlay"/>
+                <div style={{ position: 'absolute', top: '.85rem', right: '.85rem', background: '#FFCE00', color: '#0E1117', padding: '.25rem .55rem', borderRadius: '4px', fontFamily: 'JetBrains Mono, monospace', fontSize: '.6rem', letterSpacing: '.08em', fontWeight: 800, textTransform: 'uppercase', zIndex: 2 }}>{c.tag}</div>
+                <div style={{ position: 'absolute', bottom: '.9rem', left: '1rem', right: '1rem', zIndex: 2 }}>
+                  <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.58rem', letterSpacing: '.16em', color: '#FFCE00', fontWeight: 800, textTransform: 'uppercase', marginBottom: '.25rem' }}>{c.ix} · {c.cat}</div>
+                  <h4 style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '1.1rem', color: '#FFFFFF', lineHeight: 1, letterSpacing: '-0.01em', marginBottom: '.3rem' }}>{c.n}</h4>
+                  <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.62rem', color: 'rgba(255,255,255,0.7)', letterSpacing: '.06em' }}>{c.range}</div>
+                </div>
               </div>
             ))}
           </div>
@@ -11524,8 +11600,6 @@ function App() {
       case 'alo-sucursales': return <AloSucursalesSection/>;
       case 'alo-latam':      return <AloLatamSection/>;
       case 'eco':        return <EcoSection/>;
-      case 'roadmap':    return <RoadmapSection/>;
-      case 'invest':     return <InvestSection/>;
       default:           return <SummarySection/>;
     }
   }
