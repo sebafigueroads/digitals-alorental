@@ -6920,10 +6920,8 @@ function Sidebar({ section, setSection, onClickItem }) {
       { id: 'summary',    num: '00.0', label: '📋 Resumen ejecutivo' }
     ] },
     { name: 'B · Diagnóstico ALO Rental', items: [
-      { id: 'brief',          num: '01.0', label: '🎯 Brief + capacidades flota' },
-      { id: 'audit',          num: '01.1', label: '🔍 alorental.cl · audit actual' },
-      { id: 'market',         num: '01.2', label: '📊 Benchmark + competidores' },
-      { id: 'insights',       num: '01.3', label: '💡 5 insights B2B industrial' }
+      { id: 'market',         num: '01.0', label: '📊 Benchmark + competidores' },
+      { id: 'insights',       num: '01.1', label: '💡 5 insights B2B industrial' }
     ] },
     { name: 'C · Estrategia comunicacional', items: [
       { id: 'comm',       num: '02.0', label: '🗣 Voz + tono industrial' },
@@ -6937,7 +6935,10 @@ function Sidebar({ section, setSection, onClickItem }) {
       { id: 'web-digitalscut', num: 'W.4', label: '✨ W.4 · Digitals Cut · dark editorial', accent: '#FFCE00' },
       { id: 'web-tailored-v2', num: 'W.5', label: '★ W.5 · Tailored V2 · amarillo signature', accent: '#FFCE00' }
     ] },
-    { name: 'F · Showcase + Cierre', items: [
+    { name: 'F · Widgets · cómo se ocupan', featured: true, badge: 'INTERACTIVOS', items: [
+      { id: 'widgets-guide', num: 'W.6', label: '🧮 Cotizador + Recomendador · uso real', accent: '#FFCE00' }
+    ] },
+    { name: 'G · Showcase + Cierre', items: [
       { id: 'showcase', num: 'S.0', label: '🎬 Showcase · gráficas + videos' }
     ] }
   ];
@@ -6994,12 +6995,21 @@ function SummarySection() {
         <div className="summary-kicker">— DIGITALS · PROPUESTA INTEGRAL · 2026</div>
         <h2 className="summary-title">Construimos la <em>marca digital</em> que el oficio operativo ya viene haciendo en faena.</h2>
         <p className="summary-lead">
-          ALO Rental opera hace 4 años, tiene equipos JLG certificados, vistió a Codelco para el último División Andina
-          y convierte 70-80 leads de Google al mes. El oficio existe. Lo que falta es el sistema digital que lo proyecte:
-          <b> una web madre nueva con identidad editorial, 2 landings dedicadas por servicio, un embudo con Hapee + agente IA
-          filtrando prospectos, always-on en Google ya operando y un sistema de testeo en Meta para encontrar anuncios ganadores.</b>
-          Más una narrativa de sostenibilidad ESG que convierte cada operación en activo de marca real.
+          ALO Rental opera hace 20 años, representa oficialmente JLG en Chile, tiene 2.050+ equipos en flota y opera 9 sucursales de Iquique a Puerto Montt. El oficio existe. Lo que falta es el sistema digital que lo proyecte:
+          <b> una nueva alorental.cl con identidad propia, widgets que califican leads antes del ejecutivo (Cotizador + Recomendador IA), un embudo con Hapee filtrando prospectos en menos de 3 minutos</b>, y una narrativa coherente con la posición Access 50 KHL Group que ALO ya conquistó en LATAM.
         </p>
+
+        {/* ANEXO · maqueta de trabajo */}
+        <div style={{ marginTop: '1.6rem', padding: '1.2rem 1.4rem', background: 'linear-gradient(135deg, rgba(255,206,0,0.10), rgba(255,206,0,0.02))', border: '1px dashed rgba(255,206,0,0.50)', borderLeft: '3px solid #FFCE00', borderRadius: '10px', position: 'relative' }}>
+          <div style={{ position: 'absolute', top: '-10px', left: '16px', background: '#0E1117', padding: '.2rem .7rem', borderRadius: '999px', fontFamily: 'JetBrains Mono, monospace', fontSize: '.58rem', letterSpacing: '.20em', color: '#FFCE00', textTransform: 'uppercase', fontWeight: 800, border: '1px solid rgba(255,206,0,0.45)' }}>★ DOCUMENTO ANEXO A LA PRESENTACIÓN</div>
+          <p style={{ marginTop: '.4rem', fontSize: '.92rem', lineHeight: 1.6, color: 'var(--ink)' }}>
+            Este documento es <b>anexo a la presentación comercial</b> · adentro encontrarás <b>propuestas tipo maqueta</b> de cómo se vería la nueva alorental.cl funcionando · cada widget interactivo · cada embudo · cada showcase. Es material listo para trabajar en caso de que avancemos juntos, a modo de muestra concreta del estándar Digitals.
+          </p>
+          <p style={{ marginTop: '.7rem', fontFamily: 'Instrument Serif, serif', fontStyle: 'italic', fontSize: '1.15rem', lineHeight: 1.45, color: '#FFCE00', letterSpacing: '-0.01em' }}>
+            "Material de trabajo · pensado para mostrarte cómo opera Digitals antes de firmar nada."
+          </p>
+        </div>
+
         <div className="fact-row">
           {b.facts.map(f => (
             <div key={f.k} className="fact tilt">
@@ -10579,11 +10589,11 @@ function ShowcaseSection() {
       <div style={{ marginBottom: '2.4rem' }}>
         <h3 style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '1.6rem', color: 'var(--ink)', marginBottom: '.4rem', letterSpacing: '-0.01em' }}>Posters editoriales · 3 campañas estrella</h3>
         <p style={{ fontSize: '.86rem', color: 'var(--ink-soft)', marginBottom: '1rem' }}>Tres piezas hero para campañas anuales: nueva flota 2026, brand asset del casco icónico ALO y editorial lead-gen B2B "5 señales". Reutilizables en web, paid Meta + LinkedIn, prensa, vallas y brochure.</p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', alignItems: 'start' }}>
           {HF_POSTERS.map((p, i) => (
-            <div key={i} style={{ borderRadius: '14px', overflow: 'hidden', border: '2px solid #FFCE00', background: '#1A1F28', boxShadow: '0 16px 40px -16px rgba(255,206,0,0.30)' }}>
-              <div style={{ aspectRatio: '4/5', backgroundImage: `url(${p.src})`, backgroundSize: 'cover', backgroundPosition: 'center', background: '#0E1117' }}>
-                <img src={p.src} alt={p.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}/>
+            <div key={i} style={{ borderRadius: '14px', overflow: 'hidden', border: '2px solid #FFCE00', background: '#0E1117', boxShadow: '0 16px 40px -16px rgba(255,206,0,0.30)' }}>
+              <div style={{ aspectRatio: '1696 / 2528', background: '#0E1117', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <img src={p.src} alt={p.title} style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }}/>
               </div>
               <div style={{ padding: '1rem 1.2rem' }}>
                 <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.58rem', letterSpacing: '.16em', color: '#FFCE00', textTransform: 'uppercase', fontWeight: 800, marginBottom: '.3rem' }}>{p.tag}</div>
@@ -10618,10 +10628,12 @@ function ShowcaseSection() {
       <div style={{ marginBottom: '2.4rem' }}>
         <h3 style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '1.6rem', color: 'var(--ink)', marginBottom: '.4rem', letterSpacing: '-0.01em' }}>Flyers production-ready · 2 piezas</h3>
         <p style={{ fontSize: '.86rem', color: 'var(--ink-soft)', marginBottom: '1rem' }}>Story IG + Facebook 9:16 · listas para publicar con CTA y datos reales.</p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem', alignItems: 'start' }}>
           {FLYERS.map((f, i) => (
-            <div key={i} style={{ borderRadius: '14px', overflow: 'hidden', border: '2px solid #FFCE00', background: '#1A1F28' }}>
-              <div style={{ aspectRatio: '9/16', backgroundImage: `url(${f.src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}/>
+            <div key={i} style={{ borderRadius: '14px', overflow: 'hidden', border: '2px solid #FFCE00', background: '#0E1117' }}>
+              <div style={{ aspectRatio: '9 / 16', background: '#0E1117', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <img src={f.src} alt={f.title} style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }}/>
+              </div>
               <div style={{ padding: '1rem 1.2rem' }}>
                 <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.58rem', letterSpacing: '.16em', color: '#FFCE00', textTransform: 'uppercase', fontWeight: 800, marginBottom: '.3rem' }}>{f.tag} · REAL · ALO</div>
                 <div style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 800, fontSize: '1rem', color: 'var(--ink)', marginBottom: '.4rem' }}>{f.title}</div>
@@ -11532,6 +11544,156 @@ function WebTailoredV2Section() {
   );
 }
 
+/* ====================================================================
+   W.6 · WIDGETS GUIDE · cómo se usan Cotizador + Recomendador
+   ==================================================================== */
+function WidgetsGuideSection() {
+  return (
+    <section>
+      <SectionHead num="W.6"
+        title="Widgets · <em>cómo se ocupan en la web</em>"
+        desc="Las propuestas W.4 y W.5 integran dos widgets interactivos que reducen fricción comercial: el Cotizador instantáneo (1 click → estimación con descuento por plazo) y el Recomendador IA (¿qué equipo necesito?). Aquí explicamos cuándo activarlos, qué visitante captan y cómo se conectan al embudo Hapee."/>
+
+      <div className="info-card" style={{ marginBottom: '1.6rem', borderColor: '#FFCE00', background: 'rgba(255,206,0,0.08)' }}>
+        <div className="d-kicker">★ POSICIÓN DIGITALS</div>
+        <h4 style={{ marginTop: '.4rem', fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, letterSpacing: '-0.01em' }}>Cada widget es un <em style={{ fontStyle: 'normal', color: '#FFCE00' }}>filtro comercial</em> · no un gadget.</h4>
+        <p style={{ marginTop: '.5rem' }}>El equipo comercial ALO no tiene tiempo de responder a quien todavía no sabe qué pedir. Estos widgets convierten al curioso en lead calificado <b>antes</b> de que entre al funnel. Resultado: el ejecutivo solo recibe contactos con categoría + altura + sucursal + fechas ya estimadas.</p>
+      </div>
+
+      {/* ============= WIDGET 1 · COTIZADOR ============= */}
+      <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: '2rem', marginBottom: '2.6rem', alignItems: 'start' }}>
+        <div>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '.6rem', marginBottom: '.8rem' }}>
+            <span style={{ background: '#0E1117', color: '#FFCE00', padding: '.35rem .8rem', borderRadius: '999px', fontFamily: 'JetBrains Mono, monospace', fontSize: '.6rem', letterSpacing: '.2em', fontWeight: 800, textTransform: 'uppercase' }}>★ WIDGET 01</span>
+            <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.62rem', letterSpacing: '.18em', color: 'var(--ink-soft)', textTransform: 'uppercase' }}>cotizador instantáneo</span>
+          </div>
+          <h3 style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '2.2rem', color: 'var(--ink)', letterSpacing: '-0.02em', lineHeight: 1, marginBottom: '.8rem' }}>Cotiza por día · <em style={{ fontStyle: 'normal', color: '#FFCE00' }}>respuesta inmediata.</em></h3>
+          <p style={{ fontSize: '.95rem', color: 'var(--ink-soft)', lineHeight: 1.6, marginBottom: '1rem' }}>
+            Para visitantes que <b>ya saben qué equipo quieren</b> (jefe de obra, prevencionista, gerente proyectos). Selecciona categoría + días + sucursal + operador → estima costo total con descuento automático por plazo.
+          </p>
+          <div style={{ background: 'rgba(255,206,0,0.06)', border: '1px solid rgba(255,206,0,0.25)', borderRadius: '12px', padding: '1rem 1.2rem', marginBottom: '1rem' }}>
+            <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.62rem', letterSpacing: '.18em', color: '#FFCE00', fontWeight: 800, textTransform: 'uppercase', marginBottom: '.5rem' }}>4 inputs · 1 output en menos de 30s</div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '.5rem', fontSize: '.85rem' }}>
+              <div>· Categoría (5 opciones)</div>
+              <div>· Días (1-90+)</div>
+              <div>· Sucursal (9 opciones)</div>
+              <div>· Operador cert. (sí/no)</div>
+            </div>
+          </div>
+          <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.6rem', letterSpacing: '.18em', color: 'var(--ink-soft)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '.5rem' }}>Descuento automático por plazo</div>
+          <div style={{ display: 'flex', gap: '.4rem', flexWrap: 'wrap', marginBottom: '1rem' }}>
+            <span style={{ padding: '.35rem .7rem', background: 'rgba(255,206,0,0.10)', border: '1px solid rgba(255,206,0,0.30)', color: '#FFCE00', borderRadius: '999px', fontFamily: 'JetBrains Mono, monospace', fontSize: '.65rem', fontWeight: 700 }}>≥7 días · −5%</span>
+            <span style={{ padding: '.35rem .7rem', background: 'rgba(255,206,0,0.10)', border: '1px solid rgba(255,206,0,0.30)', color: '#FFCE00', borderRadius: '999px', fontFamily: 'JetBrains Mono, monospace', fontSize: '.65rem', fontWeight: 700 }}>≥14 días · −10%</span>
+            <span style={{ padding: '.35rem .7rem', background: 'rgba(255,206,0,0.10)', border: '1px solid rgba(255,206,0,0.30)', color: '#FFCE00', borderRadius: '999px', fontFamily: 'JetBrains Mono, monospace', fontSize: '.65rem', fontWeight: 700 }}>≥30 días · −18%</span>
+          </div>
+        </div>
+
+        <div style={{ background: 'rgba(14,17,23,0.55)', border: '1px solid rgba(255,206,0,0.25)', borderRadius: '14px', padding: '1.4rem 1.4rem' }}>
+          <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.6rem', letterSpacing: '.2em', color: '#FFCE00', fontWeight: 800, textTransform: 'uppercase', marginBottom: '.8rem' }}>★ Casos de uso reales</div>
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '.9rem' }}>
+            <li style={{ padding: '.85rem 1rem', background: 'rgba(255,255,255,0.03)', borderRadius: '10px', borderLeft: '3px solid #FFCE00' }}>
+              <div style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 800, fontSize: '.95rem', color: 'var(--ink)', marginBottom: '.3rem' }}>Jefe de obra · constructora</div>
+              <div style={{ fontSize: '.82rem', color: 'var(--ink-soft)', lineHeight: 1.55 }}>Necesita 2 brazos articulados 38m por 14 días para mantención fachada. Cotiza en 30s → ve precio con −10% → solicita formal en WhatsApp.</div>
+            </li>
+            <li style={{ padding: '.85rem 1rem', background: 'rgba(255,255,255,0.03)', borderRadius: '10px', borderLeft: '3px solid #FFCE00' }}>
+              <div style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 800, fontSize: '.95rem', color: 'var(--ink)', marginBottom: '.3rem' }}>Compras · minera</div>
+              <div style={{ fontSize: '.82rem', color: 'var(--ink-soft)', lineHeight: 1.55 }}>Cotiza referencia 6 tijeras 18m por 90 días en Antofagasta → ve −18% por plazo largo → adjunta al RFP del próximo trimestre.</div>
+            </li>
+            <li style={{ padding: '.85rem 1rem', background: 'rgba(255,255,255,0.03)', borderRadius: '10px', borderLeft: '3px solid #FFCE00' }}>
+              <div style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 800, fontSize: '.95rem', color: 'var(--ink)', marginBottom: '.3rem' }}>Productora · activación</div>
+              <div style={{ fontSize: '.82rem', color: 'var(--ink-soft)', lineHeight: 1.55 }}>Necesita 1 camión alzahombre + operador para evento de 3 días → cotiza con operador certificado incluido → cierra por mail.</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* ============= WIDGET 2 · RECOMENDADOR IA ============= */}
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.1fr', gap: '2rem', marginBottom: '2.6rem', alignItems: 'start' }}>
+        <div style={{ background: 'rgba(14,17,23,0.55)', border: '1px solid rgba(255,107,0,0.30)', borderRadius: '14px', padding: '1.4rem 1.4rem' }}>
+          <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.6rem', letterSpacing: '.2em', color: '#FF6B00', fontWeight: 800, textTransform: 'uppercase', marginBottom: '.8rem' }}>★ Casos de uso reales</div>
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '.9rem' }}>
+            <li style={{ padding: '.85rem 1rem', background: 'rgba(255,255,255,0.03)', borderRadius: '10px', borderLeft: '3px solid #FF6B00' }}>
+              <div style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 800, fontSize: '.95rem', color: 'var(--ink)', marginBottom: '.3rem' }}>Inmobiliaria · primera vez</div>
+              <div style={{ fontSize: '.82rem', color: 'var(--ink-soft)', lineHeight: 1.55 }}>"Necesito acceder a fachada de 22m con obstáculos al lado." → IA recomienda <b>brazo articulado JLG 26m</b> (match 96%) por sobre tijera (no sortea obstáculos).</div>
+            </li>
+            <li style={{ padding: '.85rem 1rem', background: 'rgba(255,255,255,0.03)', borderRadius: '10px', borderLeft: '3px solid #FF6B00' }}>
+              <div style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 800, fontSize: '.95rem', color: 'var(--ink)', marginBottom: '.3rem' }}>Retail · centro comercial</div>
+              <div style={{ fontSize: '.82rem', color: 'var(--ink-soft)', lineHeight: 1.55 }}>"Cambio luminarias interior 14m." → IA recomienda <b>Spider compacto</b> (match 91%) por tracción oruga interior + bajo consumo eléctrico.</div>
+            </li>
+            <li style={{ padding: '.85rem 1rem', background: 'rgba(255,255,255,0.03)', borderRadius: '10px', borderLeft: '3px solid #FF6B00' }}>
+              <div style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 800, fontSize: '.95rem', color: 'var(--ink)', marginBottom: '.3rem' }}>Forestal · subir herramienta</div>
+              <div style={{ fontSize: '.82rem', color: 'var(--ink-soft)', lineHeight: 1.55 }}>"Necesito subir 3 toneladas a 15m, no solo persona." → IA recomienda <b>Manipulador Telescópico JLG</b> (match 98%) · brazo articulado no sirve para carga.</div>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '.6rem', marginBottom: '.8rem' }}>
+            <span style={{ background: '#FF6B00', color: '#FFFFFF', padding: '.35rem .8rem', borderRadius: '999px', fontFamily: 'JetBrains Mono, monospace', fontSize: '.6rem', letterSpacing: '.2em', fontWeight: 800, textTransform: 'uppercase' }}>🤖 WIDGET 02</span>
+            <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.62rem', letterSpacing: '.18em', color: 'var(--ink-soft)', textTransform: 'uppercase' }}>recomendador IA</span>
+          </div>
+          <h3 style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '2.2rem', color: 'var(--ink)', letterSpacing: '-0.02em', lineHeight: 1, marginBottom: '.8rem' }}>¿Qué equipo necesito? · <em style={{ fontStyle: 'normal', color: '#FF6B00' }}>te lo recomienda en 30s.</em></h3>
+          <p style={{ fontSize: '.95rem', color: 'var(--ink-soft)', lineHeight: 1.6, marginBottom: '1rem' }}>
+            Para visitantes que <b>NO saben qué equipo pedir</b> (administrador condominio, gerente operaciones, planner activaciones). La IA cruza altura + ambiente + obstáculos + carga con los 2.050+ equipos JLG/ALO Lift y devuelve el modelo correcto con % de match.
+          </p>
+          <div style={{ background: 'rgba(255,107,0,0.06)', border: '1px solid rgba(255,107,0,0.25)', borderRadius: '12px', padding: '1rem 1.2rem', marginBottom: '1rem' }}>
+            <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.62rem', letterSpacing: '.18em', color: '#FF6B00', fontWeight: 800, textTransform: 'uppercase', marginBottom: '.5rem' }}>4 preguntas · 1 recomendación con match %</div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '.5rem', fontSize: '.85rem' }}>
+              <div>· Altura objetivo</div>
+              <div>· Ambiente (interior/exterior)</div>
+              <div>· Obstáculos sí/no</div>
+              <div>· Carga adicional kg</div>
+            </div>
+          </div>
+          <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.6rem', letterSpacing: '.18em', color: 'var(--ink-soft)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '.5rem' }}>Output IA</div>
+          <p style={{ fontSize: '.82rem', color: 'var(--ink-soft)', lineHeight: 1.55 }}>Equipo recomendado + match % + alternativa secundaria + link directo a cotización en el Widget 01 (precarga categoría). Sin registro, sin email.</p>
+        </div>
+      </div>
+
+      {/* ============= FLUJO INTEGRACIÓN ============= */}
+      <div style={{ background: 'linear-gradient(135deg, rgba(255,206,0,0.06), rgba(255,107,0,0.04))', border: '1px solid rgba(255,206,0,0.30)', borderRadius: '14px', padding: '1.8rem 2rem', marginBottom: '2rem' }}>
+        <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.62rem', letterSpacing: '.2em', color: '#FFCE00', fontWeight: 800, textTransform: 'uppercase', marginBottom: '.5rem' }}>★ Cómo se conectan al embudo</div>
+        <h3 style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '1.8rem', color: 'var(--ink)', letterSpacing: '-0.02em', marginBottom: '1rem' }}>Recomendador → Cotizador → Hapee CRM · loop cerrado</h3>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '.8rem' }}>
+          {[
+            { n: '01', t: 'Visitante llega', d: 'Web madre o landing · puede no saber qué equipo necesita.' },
+            { n: '02', t: 'Recomendador IA', d: 'Responde 4 preguntas · recibe match con categoría + modelo.' },
+            { n: '03', t: 'Cotizador', d: 'Click "cotizar este equipo" · días + sucursal + operador · precio en pantalla.' },
+            { n: '04', t: 'Hapee CRM + WhatsApp', d: 'Lead llega scoreado al ejecutivo · contexto completo · respuesta humana en <4h.' }
+          ].map((s, i) => (
+            <div key={i} style={{ padding: '1rem', background: 'rgba(255,255,255,0.04)', borderRadius: '10px', border: '1px solid rgba(255,206,0,0.20)' }}>
+              <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.6rem', letterSpacing: '.16em', color: '#FFCE00', fontWeight: 800, textTransform: 'uppercase', marginBottom: '.3rem' }}>Paso {s.n}</div>
+              <h5 style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '1rem', color: 'var(--ink)', letterSpacing: '-0.01em', marginBottom: '.3rem' }}>{s.t}</h5>
+              <p style={{ fontSize: '.78rem', color: 'var(--ink-soft)', lineHeight: 1.4 }}>{s.d}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* ============= KPIs DE WIDGETS ============= */}
+      <div className="d-kicker yellow" style={{ marginBottom: '1rem' }}>★ KPIs esperables · widgets activos primer trimestre</div>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '.8rem', marginBottom: '2rem' }}>
+        {[
+          { v: '+3.2×', l: 'leads calificados vs formulario tradicional' },
+          { v: '−68%', l: 'tiempo del ejecutivo en pre-calificar' },
+          { v: '+42%', l: 'cierre M1 vs leads sin widget' },
+          { v: '<30 s', l: 'desde visita a estimación visible' }
+        ].map((k, i) => (
+          <div key={i} style={{ padding: '1.2rem 1rem', background: 'rgba(255,206,0,0.06)', border: '1px solid rgba(255,206,0,0.25)', borderRadius: '12px', textAlign: 'center' }}>
+            <div style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 900, fontSize: '2.4rem', color: '#FFCE00', lineHeight: 1, letterSpacing: '-0.02em', marginBottom: '.3rem', textShadow: '0 0 20px rgba(255,206,0,0.35)' }}>{k.v}</div>
+            <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '.62rem', letterSpacing: '.12em', color: 'var(--ink-soft)', fontWeight: 700, textTransform: 'uppercase' }}>{k.l}</div>
+          </div>
+        ))}
+      </div>
+
+      <div className="info-card" style={{ borderColor: 'var(--accent)', background: 'rgba(255,107,0,0.04)' }}>
+        <div className="d-kicker">★ NOTA TÉCNICA</div>
+        <p style={{ marginTop: '.4rem' }}>Ambos widgets viven dentro de la web aprobada (W.4 o W.5) · sin app móvil aparte · sin login. Si ALO Rental decide conectar GPS/ERP/telemetría en el futuro (ver sección <b>D · Embudo · bloque opcional</b>), los widgets se enriquecen automáticamente con disponibilidad real de flota en sucursal y ETA de despacho.</p>
+      </div>
+    </section>
+  );
+}
+
 function App() {
   const initial = (window.location.hash || '#summary').replace('#', '');
   const [section, setSection] = useState(initial);
@@ -11609,8 +11771,6 @@ function App() {
   function renderSection() {
     switch (section) {
       case 'summary':    return <SummarySection/>;
-      case 'brief':      return <BriefSection/>;
-      case 'audit':      return <AuditSection/>;
       case 'market':     return <MarketSection/>;
       case 'insights':   return <InsightsSection/>;
       case 'comm':       return <CommSection/>;
@@ -11619,7 +11779,8 @@ function App() {
       case 'funnel':     return <FunnelSection/>;
       case 'web-digitalscut': return <DigitalsCutSection/>;
       case 'web-tailored-v2': return <WebTailoredV2Section/>;
-      case 'showcase':       return <ShowcaseSection/>;
+      case 'widgets-guide':   return <WidgetsGuideSection/>;
+      case 'showcase':        return <ShowcaseSection/>;
       default:           return <SummarySection/>;
     }
   }
