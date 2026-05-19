@@ -6986,7 +6986,6 @@ function SectionHead({ num, title, desc }) {
    00.0 RESUMEN EJECUTIVO
    ======================================================== */
 function SummarySection() {
-  const b = T.brand;
   return (
     <section>
       <SectionHead num="00.0" title="Resumen <em>ejecutivo</em>"
@@ -6994,72 +6993,24 @@ function SummarySection() {
       <div className="summary-hero">
         <div className="summary-kicker">— DIGITALS · PROPUESTA INTEGRAL · 2026</div>
         <h2 className="summary-title">Construimos la <em>marca digital</em> que el oficio operativo ya viene haciendo en faena.</h2>
+
         <p className="summary-lead">
-          ALO Rental opera hace 20 años, representa oficialmente JLG en Chile, tiene 2.050+ equipos en flota y opera 9 sucursales de Iquique a Puerto Montt. El oficio existe. Lo que falta es el sistema digital que lo proyecte:
-          <b> una nueva alorental.cl con identidad propia, widgets que califican leads antes del ejecutivo (Cotizador + Recomendador IA), un embudo con Hapee filtrando prospectos en menos de 3 minutos</b>, y una narrativa coherente con la posición Access 50 KHL Group que ALO ya conquistó en LATAM.
+          ALO Rental representa oficialmente a JLG en Chile y opera con flota propia ALO Lift, con <b>cobertura nacional a través de múltiples sucursales</b> de norte a sur del país. El oficio existe; lo que falta es el sistema digital que lo proyecte al estándar que ya tiene en faena.
+        </p>
+
+        <p className="summary-lead" style={{ marginTop: '.9rem' }}>
+          Esta propuesta integra una nueva alorental.cl con identidad propia, widgets que califican prospectos antes del ejecutivo (Cotizador + Recomendador IA) y un embudo Hapee + IA que responde en minutos. Material modernizado · sin abandonar lo que el mercado ya reconoce.
         </p>
 
         {/* ANEXO · maqueta de trabajo */}
-        <div style={{ marginTop: '1.6rem', padding: '1.2rem 1.4rem', background: 'linear-gradient(135deg, rgba(255,206,0,0.10), rgba(255,206,0,0.02))', border: '1px dashed rgba(255,206,0,0.50)', borderLeft: '3px solid #FFCE00', borderRadius: '10px', position: 'relative' }}>
+        <div style={{ marginTop: '1.4rem', padding: '1rem 1.2rem', background: 'linear-gradient(135deg, rgba(255,206,0,0.10), rgba(255,206,0,0.02))', border: '1px dashed rgba(255,206,0,0.50)', borderLeft: '3px solid #FFCE00', borderRadius: '10px', position: 'relative' }}>
           <div style={{ position: 'absolute', top: '-10px', left: '16px', background: '#0E1117', padding: '.2rem .7rem', borderRadius: '999px', fontFamily: 'JetBrains Mono, monospace', fontSize: '.58rem', letterSpacing: '.20em', color: '#FFCE00', textTransform: 'uppercase', fontWeight: 800, border: '1px solid rgba(255,206,0,0.45)' }}>★ DOCUMENTO ANEXO A LA PRESENTACIÓN</div>
-          <p style={{ marginTop: '.4rem', fontSize: '.92rem', lineHeight: 1.6, color: 'var(--ink)' }}>
-            Este documento es <b>anexo a la presentación comercial</b> · adentro encontrarás <b>propuestas tipo maqueta</b> de cómo se vería la nueva alorental.cl funcionando · cada widget interactivo · cada embudo · cada showcase. Es material listo para trabajar en caso de que avancemos juntos, a modo de muestra concreta del estándar Digitals.
+          <p style={{ marginTop: '.5rem', fontSize: '.92rem', lineHeight: 1.55, color: 'var(--ink)' }}>
+            Anexo a la presentación comercial · adentro encuentras <b>propuestas tipo maqueta</b> de cómo se vería la nueva alorental.cl funcionando, listas para trabajar si avanzamos juntos.
           </p>
-          <p style={{ marginTop: '.7rem', fontFamily: 'Instrument Serif, serif', fontStyle: 'italic', fontSize: '1.15rem', lineHeight: 1.45, color: '#FFCE00', letterSpacing: '-0.01em' }}>
+          <p style={{ marginTop: '.6rem', fontFamily: 'Instrument Serif, serif', fontStyle: 'italic', fontSize: '1.1rem', lineHeight: 1.4, color: '#FFCE00', letterSpacing: '-0.01em' }}>
             "Material de trabajo · pensado para mostrarte cómo opera Digitals antes de firmar nada."
           </p>
-        </div>
-
-        <div className="fact-row">
-          {b.facts.map(f => (
-            <div key={f.k} className="fact tilt">
-              <span className="k">{f.k}</span>
-              <span className="v">{f.v}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="pillars-row">
-        <div className="pillar-block tilt">
-          <span className="num">01</span>
-          <h3>Estudio + <em>estrategia</em></h3>
-          <p>Benchmark con 10 players (CL + globales), insights B2B, estrategia comunicacional con 6 pilares de contenido y estrategia gráfica con paleta + tipografía propias. Es la base que define todo lo que viene después.</p>
-          <ul>
-            <li>Matriz competitiva con score y gaps reales</li>
-            <li><b>6 pilares</b> de contenido con cadencia mensual</li>
-            <li>Manual de marca + sub-marcas Pro / Flota / Eco</li>
-          </ul>
-        </div>
-        <div className="pillar-block tilt">
-          <span className="num">02</span>
-          <h3>Web madre + <em>2 landings</em></h3>
-          <p>Nueva alorental.cl editorial · 9 secciones · arquitectura B2B-first. Más 2 landings dedicadas: una para Brazos + Manipuladores y otra para Rental B2B B2B. Cada campaña pagada va a su LP con copy y proof específicos.</p>
-          <ul>
-            <li><b>Web madre v2.0</b> · stack moderno + tracking server-side</li>
-            <li>Landing Tijeras · acento naranja JLG</li>
-            <li>Landing Flota B2B · acento eco lime · PDF capacidades</li>
-          </ul>
-        </div>
-        <div className="pillar-block tilt">
-          <span className="num">03</span>
-          <h3>Embudo + <em>Hapee + IA</em></h3>
-          <p>Hapee como CRM operativo + agente IA que filtra prospectos en primera línea: distingue cliente antiguo vs nuevo, califica intención, enruta por servicio. La cotización express con SLA visible es el corazón del sistema.</p>
-          <ul>
-            <li><b>5 etapas</b> · TOFU · MOFU IA · BOFU · POST · LOOP</li>
-            <li>Respuesta automática &lt;3 min · cotización &lt;24h</li>
-            <li>Tracking server-side · CAPI · cero pérdida de datos</li>
-          </ul>
-        </div>
-        <div className="pillar-block tilt">
-          <span className="num">04</span>
-          <h3>Always-on Google + <em>testeo Meta</em></h3>
-          <p>4 líneas Google always-on con landings dedicadas (Tijeras / Brazos / Minería / Operador). Sistema Meta de 3 fases para descubrir ganadores creativos a bajo costo y escalarlos con Advantage+ y lookalikes.</p>
-          <ul>
-            <li><b>Quality Score 8+</b> objetivo en todos los core keywords</li>
-            <li>24 creativos en testeo F1 · ganadores escalados</li>
-            <li>ROAS objetivo &gt;3× promedio · CPL -30 a -40%</li>
-          </ul>
         </div>
       </div>
     </section>
